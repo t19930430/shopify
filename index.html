@@ -12,149 +12,180 @@
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <style>
       :root{
-        --bg:#FAF8F4; --surface:#FFFFFF; --panel:#F3F0E9;
-        --ink:#1B1A17; --sub:#5D5850; --faint:#8A8478;
-        --line:#E3DDD1; --green:#1E4D3B; --green-soft:#EAF0EC;
-        --radius:14px;
+        --paper:#FAF9F5; --ink:#181713; --sub:#55534A; --faint:#8E897B;
+        --line:#E4E0D2; --card:#FFFFFF; --panel:#F2EFE6;
+        --ai:#24365E; --ai-deep:#1C2A49; --shu:#B3402A;
       }
       @media (prefers-color-scheme: dark){
         :root{
-          --bg:#141311; --surface:#1D1C19; --panel:#23221E;
-          --ink:#EDEAE2; --sub:#B4AEA1; --faint:#8A8478;
-          --line:#33312B; --green:#7FB69C; --green-soft:#22302A;
+          --paper:#121310; --ink:#EDEAE1; --sub:#B0AB9C; --faint:#7E796B;
+          --line:#2E2C26; --card:#1B1B17; --panel:#1E1D18;
+          --ai:#93A7D9; --ai-deep:#131E38; --shu:#D97B63;
         }
       }
       *{margin:0;padding:0;box-sizing:border-box}
       html{scroll-behavior:smooth}
       body{
-        background:var(--bg); color:var(--ink);
+        background:var(--paper); color:var(--ink);
         font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
         font-size:16px; line-height:1.9; letter-spacing:.02em;
         -webkit-font-smoothing:antialiased;
       }
-      a{color:var(--green); text-decoration:none}
+      a{color:var(--ai); text-decoration:none}
       a:hover{text-decoration:underline}
       img{display:block; max-width:100%}
-      .wrap{max-width:1040px; margin:0 auto; padding:0 24px}
+      .wrap{max-width:1080px; margin:0 auto; padding:0 24px}
 
-      /* ---------- top bar ---------- */
-      .topbar{
-        display:flex; justify-content:space-between; align-items:center;
-        padding:22px 0 18px; border-bottom:1px solid var(--line);
+      /* ---------- seal / brand ---------- */
+      .seal{
+        display:inline-flex; align-items:center; justify-content:center;
+        background:var(--shu); color:#FFF; font-family:"Shippori Mincho",serif; font-weight:800;
+        border-radius:6px; flex:none;
       }
-      .brand{font-weight:900; letter-spacing:.14em; font-size:13px; color:var(--ink)}
-      .brand small{font-weight:500; color:var(--faint); letter-spacing:.22em; margin-left:10px; font-size:11px}
-      .topbar a{font-size:13px; font-weight:700}
+      .topbar{display:flex; justify-content:space-between; align-items:center; padding:22px 0 20px}
+      .brand{display:flex; align-items:center; gap:12px; color:var(--ink)}
+      .brand:hover{text-decoration:none}
+      .brand .seal{width:34px; height:34px; font-size:17px}
+      .brand-name{font-weight:900; letter-spacing:.16em; font-size:14px; line-height:1.3}
+      .brand-sub{display:block; font-weight:500; font-size:10px; letter-spacing:.3em; color:var(--faint)}
+      .topbar .x-link{font-size:13px; font-weight:700}
 
       /* ---------- hero ---------- */
-      .hero{padding:64px 0 0}
-      .eyebrow{font-size:13px; font-weight:700; letter-spacing:.18em; color:var(--green); margin-bottom:14px}
-      h1{
-        font-family:"Shippori Mincho",serif; font-weight:800;
-        font-size:clamp(38px,6vw,56px); line-height:1.25; letter-spacing:.04em;
+      .hero{
+        display:grid; grid-template-columns:7fr 5fr; gap:56px; align-items:start;
+        padding:72px 0 0;
       }
-      h1 .ruby{display:block; font-family:"Zen Kaku Gothic New",sans-serif; font-weight:500;
-        font-size:14px; letter-spacing:.14em; color:var(--sub); margin-top:10px}
-      .hero-role{margin-top:14px; color:var(--sub); font-size:15px}
-      .hero-photo{margin-top:40px; position:relative}
-      .hero-photo img{width:100%; height:min(58vh,540px); object-fit:cover; border-radius:var(--radius)}
-      .hero-copy{
-        background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-        max-width:520px; padding:26px 30px; margin:-56px 0 0 32px; position:relative;
-        box-shadow:0 18px 40px rgba(27,26,23,.08);
+      .eyebrow{font-size:12.5px; font-weight:900; letter-spacing:.34em; color:var(--ai); margin-bottom:22px}
+      h1{font-family:"Shippori Mincho",serif; font-weight:800; font-size:clamp(52px,7.5vw,84px); line-height:1.15; letter-spacing:.06em}
+      .ruby{margin-top:14px; font-size:13.5px; letter-spacing:.22em; color:var(--sub); font-weight:500}
+      .statement{
+        font-family:"Shippori Mincho",serif; font-weight:600;
+        font-size:clamp(23px,3vw,30px); line-height:1.75; letter-spacing:.03em;
+        margin-top:38px; padding-top:34px; border-top:2px solid var(--ink);
       }
-      .hero-copy p{font-family:"Shippori Mincho",serif; font-weight:600; font-size:clamp(21px,3vw,27px); line-height:1.6}
-      .credit{margin-top:10px; font-size:11px; color:var(--faint); letter-spacing:.06em}
-      .hero-bio{margin-top:44px; max-width:660px; font-size:16.5px}
-      .hero-bio strong{font-weight:900}
-      .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px}
-      .btn{
-        display:inline-block; padding:13px 26px; border-radius:999px;
-        font-weight:700; font-size:14.5px; letter-spacing:.04em; line-height:1.4;
-      }
+      .statement em{font-style:normal; box-shadow:inset 0 -0.5em 0 rgba(179,64,42,.18)}
+      .hero-bio{margin-top:28px; color:var(--sub); max-width:560px}
+      .hero-bio strong{color:var(--ink); font-weight:900}
+      .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:34px}
+      .btn{display:inline-block; padding:13px 28px; border-radius:999px; font-weight:700; font-size:14.5px; line-height:1.4; letter-spacing:.04em}
       .btn:hover{text-decoration:none; opacity:.88}
-      .btn-primary{background:var(--green); color:#FFF}
-      @media (prefers-color-scheme: dark){ .btn-primary{color:#12211B} }
-      .btn-ghost{border:1px solid var(--line); color:var(--ink); background:var(--surface)}
+      .btn-primary{background:var(--ai); color:#FFF}
+      @media (prefers-color-scheme: dark){ .btn-primary{color:#10182C} }
+      .btn-ghost{border:1px solid var(--line); color:var(--ink); background:var(--card)}
 
-      /* ---------- sections ---------- */
-      section{padding:88px 0 0}
-      .sec-head{display:flex; align-items:baseline; gap:16px; border-top:1px solid var(--line); padding-top:34px; flex-wrap:wrap}
-      .sec-num{font-family:"Shippori Mincho",serif; font-weight:800; font-size:20px; color:var(--green)}
-      h2{font-family:"Shippori Mincho",serif; font-weight:800; font-size:clamp(24px,3.4vw,30px); letter-spacing:.05em}
+      .hero-fig{position:relative}
+      .hero-fig .frame{position:relative}
+      .hero-fig img{width:100%; height:560px; object-fit:cover; object-position:50% 30%}
+      .stamp{
+        position:absolute; top:-20px; left:-20px; width:74px; height:74px; border-radius:50%;
+        background:var(--shu); color:#FFF; font-family:"Shippori Mincho",serif; font-weight:800;
+        display:flex; align-items:center; justify-content:center; font-size:15px; letter-spacing:.14em;
+        transform:rotate(-10deg); box-shadow:0 10px 24px rgba(24,23,19,.22);
+        border:2px solid rgba(255,255,255,.65);
+      }
+      .v-caption{
+        writing-mode:vertical-rl; position:absolute; top:0; right:-34px;
+        font-size:12px; letter-spacing:.42em; color:var(--faint); font-weight:500;
+      }
+      .credit{margin-top:10px; font-size:11px; color:var(--faint); letter-spacing:.06em}
+
+      /* ---------- section scaffolding ---------- */
+      section{padding:96px 0 0}
+      .sec-head{position:relative; display:flex; align-items:baseline; gap:18px; flex-wrap:wrap; margin-bottom:8px}
+      .ghost{
+        font-family:"Shippori Mincho",serif; font-weight:800; font-size:64px; line-height:1;
+        color:transparent; -webkit-text-stroke:1.5px var(--ai); opacity:.4; letter-spacing:0;
+      }
+      h2{font-family:"Shippori Mincho",serif; font-weight:800; font-size:clamp(25px,3.4vw,32px); letter-spacing:.05em}
       .sec-note{margin-left:auto; font-size:13px; color:var(--faint)}
 
-      .topic-list{list-style:none; margin-top:14px}
-      .topic-list li{display:flex; gap:26px; padding:30px 4px; border-bottom:1px solid var(--line); align-items:baseline}
-      .topic-no{font-family:"Shippori Mincho",serif; font-weight:800; font-size:30px; color:var(--green); min-width:40px}
+      .topic-list{list-style:none}
+      .topic-list li{display:flex; gap:28px; padding:32px 2px; border-bottom:1px solid var(--line); align-items:baseline}
+      .topic-list li:first-child{border-top:1px solid var(--line)}
+      .topic-no{font-family:"Shippori Mincho",serif; font-weight:800; font-size:34px; color:var(--ai); min-width:52px}
       .topic-list h3{font-size:18px; font-weight:900; margin-bottom:6px}
-      .topic-list p{color:var(--sub); max-width:720px}
+      .topic-list p{color:var(--sub); max-width:730px}
       .tag{display:inline-block; white-space:nowrap; font-size:11.5px; font-weight:700; letter-spacing:.06em;
-        background:var(--green-soft); color:var(--green); border-radius:999px; padding:2px 10px; margin-left:10px; vertical-align:2px}
+        border:1.5px solid var(--shu); color:var(--shu); border-radius:999px; padding:1px 10px; margin-left:10px; vertical-align:2px}
 
-      .rules{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:36px}
-      .rule{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px 30px}
-      .rule h3{font-size:16.5px; font-weight:900; margin-bottom:8px}
-      .rule h3::before{content:"— "; color:var(--green); font-weight:900}
+      .rules{display:grid; grid-template-columns:1fr 1fr; column-gap:48px; margin-top:10px}
+      .rule{padding:26px 2px 30px; border-top:2px solid var(--ink)}
+      .rule h3{font-size:17px; font-weight:900; margin-bottom:8px}
+      .rule h3 .r-no{font-family:"Shippori Mincho",serif; color:var(--shu); margin-right:10px; font-weight:800}
       .rule p{color:var(--sub); font-size:15px}
 
-      .flow{list-style:none; margin-top:20px}
-      .flow li{display:flex; align-items:baseline; gap:22px; padding:22px 4px; border-bottom:1px solid var(--line); flex-wrap:wrap}
-      .step-name{font-family:"Shippori Mincho",serif; font-weight:800; font-size:18px; min-width:150px}
+      .flow{list-style:none}
+      .flow li{display:flex; align-items:baseline; gap:24px; padding:24px 2px; border-bottom:1px solid var(--line); flex-wrap:wrap}
+      .flow li:first-child{border-top:1px solid var(--line)}
+      .flow .f-no{font-family:"Shippori Mincho",serif; font-weight:800; font-size:22px; color:var(--ai); min-width:36px}
+      .step-name{font-family:"Shippori Mincho",serif; font-weight:800; font-size:18.5px; min-width:150px}
       .step-desc{color:var(--sub); flex:1; min-width:260px}
-      .now-badge{font-size:11.5px; font-weight:900; letter-spacing:.1em; color:var(--green);
-        border:1.5px solid var(--green); border-radius:999px; padding:2px 12px}
+      .now-seal{
+        background:var(--shu); color:#FFF; font-size:11.5px; font-weight:900; letter-spacing:.12em;
+        border-radius:5px; padding:3px 10px; transform:rotate(-3deg);
+      }
 
-      .photo-break{margin-top:88px}
-      .photo-break img{width:100%; height:min(46vh,420px); object-fit:cover; border-radius:var(--radius)}
-      .photo-break figcaption{display:flex; justify-content:space-between; gap:16px; margin-top:10px; flex-wrap:wrap}
-      .photo-break .cap{font-family:"Shippori Mincho",serif; font-weight:600; font-size:15px}
+      .photo-break{margin-top:96px}
+      .photo-break img{width:100%; height:min(48vh,440px); object-fit:cover}
+      .photo-break figcaption{display:flex; justify-content:space-between; gap:16px; margin-top:12px; flex-wrap:wrap; align-items:baseline}
+      .photo-break .cap{font-family:"Shippori Mincho",serif; font-weight:600; font-size:17px}
       .photo-break .credit{margin-top:0}
 
-      /* ---------- interview ---------- */
-      .interview-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:42px 44px; margin-top:36px}
-      .interview-card > p{max-width:700px}
-      .facts{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:32px 0 8px}
-      .fact{background:var(--panel); border-radius:10px; padding:20px 22px}
-      .fact dt{font-size:12px; font-weight:900; letter-spacing:.16em; color:var(--green); margin-bottom:8px}
-      .fact dd{font-weight:700; font-size:15.5px; line-height:1.7}
-      .faq{border-top:1px solid var(--line); padding:16px 2px 4px; margin-top:12px}
+      /* ---------- interview (dark band) ---------- */
+      .darkband{background:var(--ai-deep); color:#F2F0E9; margin-top:96px}
+      .darkband section{padding:84px 0 88px}
+      .darkband .ghost{color:transparent; -webkit-text-stroke:1.5px rgba(242,240,233,.55); opacity:.8}
+      .darkband .sec-note{color:rgba(242,240,233,.6)}
+      .darkband a{color:#FFF}
+      .interview-lead{max-width:700px; color:rgba(242,240,233,.88)}
+      .facts{display:grid; grid-template-columns:repeat(3,1fr); margin:38px 0 6px; border:1px solid rgba(242,240,233,.28)}
+      .fact{padding:24px 26px}
+      .fact + .fact{border-left:1px solid rgba(242,240,233,.28)}
+      .fact dt{font-size:11.5px; font-weight:900; letter-spacing:.22em; color:#C9A227; margin-bottom:10px}
+      .fact dd{font-weight:700; font-size:15.5px; line-height:1.75}
+      .faq{border-top:1px solid rgba(242,240,233,.22); padding:18px 2px 6px; margin-top:14px}
       .faq summary{font-weight:900; cursor:pointer; list-style:none; font-size:15.5px}
       .faq summary::-webkit-details-marker{display:none}
-      .faq summary::after{content:"＋"; float:right; color:var(--green); font-weight:900}
+      .faq summary::after{content:"＋"; float:right; font-weight:900; color:#C9A227}
       .faq[open ] summary::after{content:"−"}
-      .faq-body p{color:var(--sub); padding:10px 0 14px; max-width:680px}
-      .interview-card .hero-actions{margin-top:28px}
+      .faq-body p{color:rgba(242,240,233,.8); padding:10px 0 14px; max-width:680px}
+      .btn-light{background:#F2F0E9; color:var(--ai-deep)}
+      .darkband .hero-actions{margin-top:32px}
 
       /* ---------- copy blocks ---------- */
-      .copy-block{background:var(--panel); border-radius:var(--radius); padding:26px 30px; margin-top:20px}
+      .copy-block{border-left:3px solid var(--ai); background:var(--panel); padding:24px 28px; margin-top:22px}
       .copy-head{display:flex; justify-content:space-between; align-items:center; gap:12px}
       .copy-head h3{font-size:14px; font-weight:900; letter-spacing:.06em}
       .copy-head .len{color:var(--faint); font-weight:500; font-size:12.5px; margin-left:8px}
-      .copy-btn{border:1px solid var(--line); background:var(--surface); color:var(--ink);
+      .copy-btn{border:1px solid var(--line); background:var(--card); color:var(--ink);
         font:inherit; font-size:12.5px; font-weight:700; border-radius:999px; padding:5px 16px; cursor:pointer}
-      .copy-btn:hover{border-color:var(--green); color:var(--green)}
-      .copy-text{margin-top:12px; color:var(--sub); font-size:15px}
+      .copy-btn:hover{border-color:var(--ai); color:var(--ai)}
+      .copy-text{margin-top:10px; color:var(--sub); font-size:15px}
 
-      /* ---------- profile ---------- */
-      .profile-table{width:100%; border-collapse:collapse; margin-top:26px}
-      .profile-table th,.profile-table td{padding:16px 6px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+      /* ---------- profile / footer ---------- */
+      .profile-table{width:100%; border-collapse:collapse; margin-top:14px}
+      .profile-table th,.profile-table td{padding:17px 6px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+      .profile-table tr:first-child th,.profile-table tr:first-child td{border-top:1px solid var(--line)}
       .profile-table th{font-weight:900; width:130px; font-size:14.5px; letter-spacing:.08em}
       .profile-table td{color:var(--sub)}
 
-      footer{margin-top:96px; border-top:1px solid var(--line); padding:30px 0 44px;
-        display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-size:13px; color:var(--faint)}
+      footer{margin-top:100px; border-top:2px solid var(--ink); padding:28px 0 46px;
+        display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; font-size:13px; color:var(--faint); align-items:center}
+      footer .foot-brand{display:flex; align-items:center; gap:10px; color:var(--ink); font-weight:900; letter-spacing:.1em}
+      footer .foot-brand .seal{width:26px; height:26px; font-size:13px; border-radius:5px}
       footer .foot-copy{font-family:"Shippori Mincho",serif; font-weight:600; color:var(--sub)}
 
-      @media (max-width:720px){
-        .hero{padding-top:44px}
-        .hero-copy{margin:-40px 12px 0; padding:22px 24px}
-        section{padding-top:64px}
+      @media (max-width:820px){
+        .hero{grid-template-columns:1fr; gap:44px; padding-top:48px}
+        .hero-fig img{height:440px}
+        .v-caption{display:none}
+        .stamp{left:-8px}
+        section{padding-top:72px}
         .rules{grid-template-columns:1fr}
         .facts{grid-template-columns:1fr}
-        .interview-card{padding:30px 24px}
+        .fact + .fact{border-left:none; border-top:1px solid rgba(242,240,233,.28)}
         .sec-note{margin-left:0; width:100%}
-        .topic-list li{gap:16px}
+        .ghost{font-size:46px}
         .step-name{min-width:120px}
       }
     </style>
@@ -163,38 +194,46 @@
     <div class="wrap">
 
       <div class="topbar">
-        <span class="brand">スノーボール<small>SNOWBALL</small></span>
-        <a href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）</a>
+        <a class="brand" href="./">
+          <span class="seal">記</span>
+          <span class="brand-name">スノーボール<span class="brand-sub">FIELD RECORDS</span></span>
+        </a>
+        <a class="x-link" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）</a>
       </div>
 
       <!-- ============ Hero ============ -->
       <header class="hero">
-        <p class="eyebrow">タイセイ｜店の発送通知</p>
-        <h1>湯藤帝成<span class="ruby">ゆとう たいせい ／ Taisei Yuto</span></h1>
-        <p class="hero-role">Shopifyアプリの個人開発者（屋号：スノーボール）</p>
+        <div>
+          <p class="eyebrow">タイセイ｜店の発送通知</p>
+          <h1>湯藤帝成</h1>
+          <p class="ruby">ゆとう たいせい ／ Taisei Yuto — Shopifyアプリの個人開発者（屋号：スノーボール）</p>
 
-        <figure class="hero-photo">
-          <img src="images/hero.jpg" alt="段ボールにテープを貼り、サンキューカードを添える店舗スタッフの手元" width="1600" height="1067" />
-          <div class="hero-copy">
-            <p>発送のあとの連絡までが、<br />店の仕事。</p>
+          <p class="statement">発送のあとの<em>連絡</em>までが、<br />店の仕事。</p>
+
+          <p class="hero-bio">
+            Shopify店舗から<strong>購入者への連絡まわり</strong>で、店側が困っていることを記録しています。とくに発送通知。発送したあとの「いつ届く？」「日時を変えたい」への対応が、店舗でどれくらい手間になっているのかを知りたくて、店舗運営の方に話を聞いています。アプリはまだ作っていません。まず聞くところから始めます。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）を見る</a>
+            <a class="btn btn-ghost" href="#interview">インタビューについて</a>
           </div>
-          <p class="credit">Photo: RDNE Stock project / Pexels</p>
-        </figure>
-
-        <p class="hero-bio">
-          Shopify店舗から<strong>購入者への連絡まわり</strong>で、店側が困っていることを記録しています。とくに発送通知。発送したあとの「いつ届く？」「日時を変えたい」への対応が、店舗でどれくらい手間になっているのかを知りたくて、店舗運営の方に話を聞いています。アプリはまだ作っていません。まず聞くところから始めます。
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）を見る</a>
-          <a class="btn btn-ghost" href="#interview">インタビューについて</a>
         </div>
+
+        <figure class="hero-fig">
+          <div class="frame">
+            <img src="images/label.jpg" alt="段ボール箱のラベルに手書きで文字を書く店の人の手元" width="1200" height="1800" />
+            <span class="stamp">記録中</span>
+            <span class="v-caption">店舗から購入者への連絡まわりを記録する</span>
+          </div>
+          <p class="credit">Photo: Polina Tankilevitch / Pexels</p>
+        </figure>
       </header>
 
       <!-- ============ いま調べていること ============ -->
       <section aria-labelledby="topics-h">
         <div class="sec-head">
-          <span class="sec-num">一</span>
+          <span class="ghost">01</span>
           <h2 id="topics-h">いま調べていること</h2>
           <span class="sec-note">入口は発送通知、テーマは「店舗から購入者への連絡」全体</span>
         </div>
@@ -226,25 +265,25 @@
       <!-- ============ 記録のルール ============ -->
       <section aria-labelledby="rules-h">
         <div class="sec-head">
-          <span class="sec-num">二</span>
+          <span class="ghost">02</span>
           <h2 id="rules-h">記録のルール</h2>
           <span class="sec-note">聞いた話の残し方</span>
         </div>
         <div class="rules">
           <div class="rule">
-            <h3>店名は出しません</h3>
+            <h3><span class="r-no">一</span>店名は出しません</h3>
             <p>聞いた内容は、店舗が特定されない形でのみ残します。個別の相談内容を外に出すことはしません。</p>
           </div>
           <div class="rule">
-            <h3>数字には分母をつけます</h3>
+            <h3><span class="r-no">二</span>数字には分母をつけます</h3>
             <p>「困っている店が多い」ではなく「聞いた◯店中◯店」の形で書きます。印象ではなく事実を残すためです。</p>
           </div>
           <div class="rule">
-            <h3>出すのは検証の数字だけ</h3>
+            <h3><span class="r-no">三</span>出すのは検証の数字だけ</h3>
             <p>進捗として公開するのは、聞いた店舗数と、仮説がどう変わったか。コードや機能の自慢はしません。</p>
           </div>
           <div class="rule">
-            <h3>売り込みはしません</h3>
+            <h3><span class="r-no">四</span>売り込みはしません</h3>
             <p>インタビューは聞くためのものです。その場で何かを売ることはしませんし、断ってもらって構いません。</p>
           </div>
         </div>
@@ -253,25 +292,29 @@
       <!-- ============ 進め方 ============ -->
       <section aria-labelledby="flow-h">
         <div class="sec-head">
-          <span class="sec-num">三</span>
+          <span class="ghost">03</span>
           <h2 id="flow-h">進め方</h2>
           <span class="sec-note">いきなり作らず、聞いてから固める</span>
         </div>
         <ol class="flow">
           <li>
+            <span class="f-no">1</span>
             <span class="step-name">インタビュー</span>
             <span class="step-desc">店舗運営の方に困りごとを聞く。20店を正式な判断の区切りにしています。</span>
-            <span class="now-badge">いまここ</span>
+            <span class="now-seal">いまここ</span>
           </li>
           <li>
+            <span class="f-no">2</span>
             <span class="step-name">仕様を固める</span>
             <span class="step-desc">聞いた内容をもとに、作る機能と作らない機能を決める。</span>
           </li>
           <li>
+            <span class="f-no">3</span>
             <span class="step-name">開発とベータ</span>
             <span class="step-desc">小さく作って、協力店舗にベータとして使ってもらう。</span>
           </li>
           <li>
+            <span class="f-no">4</span>
             <span class="step-name">販売</span>
             <span class="step-desc">無料期間のあと、続けて払ってもらえるかで判断する。</span>
           </li>
@@ -279,21 +322,23 @@
       </section>
 
       <figure class="photo-break">
-        <img src="images/door.jpg" alt="玄関先で配達員から荷物を受け取る購入者" width="1440" height="961" loading="lazy" />
+        <img src="images/counter.jpg" alt="ゼロウェイスト雑貨店のカウンターに立つ店主" width="1680" height="1119" loading="lazy" />
         <figcaption>
-          <span class="cap">届いた先の画面で、伝わっているか。</span>
-          <span class="credit">Photo: Kampus Production / Pexels</span>
+          <span class="cap">店の日常の延長に、発送がある。</span>
+          <span class="credit">Photo: Polina Tankilevitch / Pexels</span>
         </figcaption>
       </figure>
+    </div>
 
-      <!-- ============ インタビュー募集 ============ -->
-      <section id="interview" aria-labelledby="interview-h">
-        <div class="sec-head">
-          <span class="sec-num">四</span>
-          <h2 id="interview-h">インタビューにご協力ください</h2>
-        </div>
-        <div class="interview-card">
-          <p>自社で梱包・発送しているShopify店舗の運営者の方に、発送まわりの困りごとを聞かせてください。通話はしません。DMやメールで質問をお送りするので、お時間のあるときに答えていただく形です。</p>
+    <!-- ============ インタビュー募集（dark band） ============ -->
+    <div class="darkband">
+      <div class="wrap">
+        <section id="interview" aria-labelledby="interview-h">
+          <div class="sec-head">
+            <span class="ghost">04</span>
+            <h2 id="interview-h">インタビューにご協力ください</h2>
+          </div>
+          <p class="interview-lead">自社で梱包・発送しているShopify店舗の運営者の方に、発送まわりの困りごとを聞かせてください。通話はしません。DMやメールで質問をお送りするので、お時間のあるときに答えていただく形です。</p>
           <dl class="facts">
             <div class="fact">
               <dt>対象</dt>
@@ -323,15 +368,17 @@
           </details>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">XのDMから連絡する</a>
+            <a class="btn btn-light" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">XのDMから連絡する</a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+    </div>
 
+    <div class="wrap">
       <!-- ============ プロフィール文（コピー用） ============ -->
       <section aria-labelledby="copy-h">
         <div class="sec-head">
-          <span class="sec-num">五</span>
+          <span class="ghost">05</span>
           <h2 id="copy-h">プロフィール文</h2>
           <span class="sec-note">SNSの各プロフィールで使っている文面</span>
         </div>
@@ -356,7 +403,7 @@
       <!-- ============ プロフィール ============ -->
       <section aria-labelledby="profile-h">
         <div class="sec-head">
-          <span class="sec-num">六</span>
+          <span class="ghost">06</span>
           <h2 id="profile-h">プロフィール</h2>
         </div>
         <table class="profile-table">
@@ -372,9 +419,9 @@
       </section>
 
       <footer>
-        <p>© 2026 スノーボール（湯藤帝成）</p>
-        <p class="foot-copy">発送のあとの連絡までが、店の仕事。</p>
-        <p>Photos: Pexels（RDNE Stock project / Kampus Production）</p>
+        <span class="foot-brand"><span class="seal">記</span>スノーボール</span>
+        <span class="foot-copy">発送のあとの連絡までが、店の仕事。</span>
+        <span>© 2026 湯藤帝成 ／ Photos: Polina Tankilevitch（Pexels）</span>
       </footer>
     </div>
 
