@@ -376,35 +376,10 @@
     </div>
 
     <div class="wrap">
-      <!-- ============ プロフィール文（コピー用） ============ -->
-      <section aria-labelledby="copy-h">
-        <div class="sec-head">
-          <span class="ghost">05</span>
-          <h2 id="copy-h">プロフィール文</h2>
-          <span class="sec-note">SNSの各プロフィールで使っている文面</span>
-        </div>
-
-        <div class="copy-block">
-          <div class="copy-head">
-            <h3>X プロフィール文 <span class="len" id="bio-len"></span></h3>
-            <button class="copy-btn" type="button" data-copy="bio-text">コピー</button>
-          </div>
-          <p class="copy-text" id="bio-text">Shopify店舗から購入者への連絡まわりで、店側が困っていることを記録しています。とくに発送通知。店舗運営の方に、DMやメールで質問に答えていただく形（目安15分）で話を聞いています。売り込みはしません。</p>
-        </div>
-
-        <div class="copy-block">
-          <div class="copy-head">
-            <h3>固定ポスト用 自己紹介</h3>
-            <button class="copy-btn" type="button" data-copy="pin-text">コピー</button>
-          </div>
-          <p class="copy-text" id="pin-text">自己紹介です。Shopify店舗の発送通知まわりを調べています。発送したあとの「いつ届く？」「日時を変えたい」への対応が、店側でどれくらい手間になっているかを知りたくて、店舗の方に話を聞いています。やりとりはDMやメールで、質問に答えていただく形（目安15分）です。アプリはまだ作っていません。聞いた内容は店名を出さず、数字と事実だけをここに残します。自社で梱包・発送している店舗の方、よければ話を聞かせてください。</p>
-        </div>
-      </section>
-
       <!-- ============ プロフィール ============ -->
       <section aria-labelledby="profile-h">
         <div class="sec-head">
-          <span class="ghost">06</span>
+          <span class="ghost">05</span>
           <h2 id="profile-h">プロフィール</h2>
         </div>
         <table class="profile-table">
@@ -426,26 +401,5 @@
       </footer>
     </div>
 
-    <script>
-      (function () {
-        var bio = document.getElementById("bio-text");
-        var len = document.getElementById("bio-len");
-        if (bio && len) len.textContent = "（" + bio.textContent.trim().length + "文字）";
-        document.querySelectorAll("[data-copy]").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            var el = document.getElementById(btn.getAttribute("data-copy"));
-            if (!el) return;
-            var done = function () {
-              var old = btn.textContent;
-              btn.textContent = "コピーしました";
-              setTimeout(function () { btn.textContent = old; }, 1600);
-            };
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard.writeText(el.textContent.trim()).then(done, done);
-            } else { done(); }
-          });
-        });
-      })();
-    </script>
   </body>
 </html>
