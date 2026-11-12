@@ -24,6 +24,31 @@
 
 
 .header .x{margin-left:auto}.header-cta{min-height:36px;padding:7px 13px;font-size:12px;gap:10px}.header-cta:after{display:none}.hero-price{margin:22px 0 0;font-size:13px;color:var(--ink);font-weight:700}.assurance{margin-top:5px}.promise{padding-top:16px;border-top:1px solid var(--line);max-width:none}.mock{padding:20px}.bar-label{font-size:10px}.sample-content{padding:20px}.sample-content h3{font-size:17px;margin:0}.sample-stock{font-size:12px;color:var(--muted);margin:4px 0 12px}.variant{display:flex;flex-wrap:wrap;gap:6px;margin:0;font-size:11px;color:var(--ink)}.variant span{border:1px solid #bdcbd1;border-radius:3px;padding:3px 7px}.sample-form{margin-top:18px;font-size:11px;color:var(--text)}.sample-input{border:1px solid #bdcbd1;padding:8px 10px;margin:5px 0 8px;border-radius:4px;color:var(--muted)}.sample-button{padding:9px;text-align:center;background:var(--navy);color:#fff;border-radius:4px;font-weight:700}.sample-connector{padding:12px;text-align:center;font-size:11px;color:#4e6967}.email .sender{font-size:11px;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:16px}.email p{font-size:12px;margin:12px 0}.sample-link{display:inline-block;color:var(--navy);font-size:12px;font-weight:700;text-decoration:underline;text-underline-offset:4px}.panel-policy{grid-column:1/-1;margin:0;padding:24px;border-top:1px solid #41566a;color:#c7d4de;font-size:13px}.price .tax{margin-top:12px}.pricing-assurance{font-size:12px;margin:14px 0 0}.register-timing{grid-column:1/-1;font-size:12px!important;margin:0!important}.data-note{font-size:12px;max-width:880px;margin:20px 0 0}@media(max-width:480px){.header .x{display:none}.hero-grid{gap:32px}.mock{padding:14px}.sample-content{padding:16px}.product{gap:12px;grid-template-columns:80px minmax(0,1fr)}.image{height:110px}.image svg{width:70px;height:95px}}
+
+/* Ruixen-inspired surfaces and spring motion, reimplemented without dependencies. */
+:root{--spring:cubic-bezier(.22,1.12,.36,1);--green:#08776e}
+.site-header{background:#fff}.mark{box-shadow:inset 0 1px 0 #ffffff24,0 3px 8px #10283e12}
+.hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at 90% 25%,#e2efeb 0,transparent 55%),linear-gradient(130deg,#fff 35%,#f3f7f6)}
+.hero:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent calc(50% - 1px),#17324d04 50%,transparent calc(50% + 1px));background-size:80px 100%}
+h1{letter-spacing:-.025em}.label{letter-spacing:.08em}.status{border-radius:100px;padding:5px 12px}.lead{line-height:2.05}
+.btn{position:relative;isolation:isolate;border-radius:9px;transition:transform .35s var(--spring),opacity .2s;box-shadow:0 2px 3px #10283e08}
+.btn:before{content:"";position:absolute;z-index:-1;inset:0;border-radius:inherit;box-shadow:0 8px 22px #10283e24;opacity:0;transition:opacity .3s}
+.primary{background:var(--green);border-color:var(--green);box-shadow:inset 0 1px 0 #ffffff26,0 3px 0 #065f58,0 4px 8px #10283e0c}
+.btn:after{transition:transform .35s var(--spring)}.btn:active{transform:translateY(1px) scale(.975)}
+.mock{border-color:#c7d9d4;border-radius:20px;background:linear-gradient(145deg,#f8fbf9,#e8f0ed);box-shadow:inset 0 1px 0 #fff,0 30px 65px -35px #17324d55}
+.mock-heading{margin:2px 4px 16px}.mock-eyebrow{letter-spacing:.06em}.window{border-radius:11px;border-color:#d3dfdb;box-shadow:0 5px 16px -10px #17324d30}.bar{background:#fafcfb}.sample-product .bar{border-left:3px solid var(--navy)}.window:has(.email) .bar{border-left:3px solid var(--green)}
+.image{background:radial-gradient(ellipse at 50% 15%,#fff,#e7ede7)}.sample-input{background:#fafcfb}.sample-button{border-radius:6px;box-shadow:inset 0 1px 0 #ffffff20}.sample-connector{position:relative;padding:17px 8px;color:#405e58;letter-spacing:.06em}.email h3{line-height:1.65}.mock figcaption{color:#4b625c}
+.head h2{letter-spacing:-.02em}.list{border-top-color:#c6d5d5}.list li{padding-top:32px;padding-bottom:34px}.ln{background:#f1f7f5}.features .ln{box-shadow:0 3px 7px #17324d18}.alt{background:#f3f7f6}
+.pricing{position:relative;isolation:isolate;background:radial-gradient(ellipse at 80% 0,#1d424b,transparent 65%),var(--deep)}
+.panel{position:relative;isolation:isolate;border:1px solid #678b8c;border-radius:18px;background:linear-gradient(125deg,#203f50,#173148 65%);box-shadow:0 24px 48px -24px #0006,inset 0 1px 0 #b9e8de24;transition:transform .45s var(--spring)}
+.panel:before{content:"";position:absolute;pointer-events:none;inset:0;z-index:-1;border-radius:inherit;box-shadow:inset 0 0 24px #a3ded712;opacity:.35;transition:opacity .35s}
+.price{padding:34px 28px}.price-number{font-size:clamp(52px,7vw,68px);font-weight:750;letter-spacing:-.055em}.price .tax{color:#c7d4de}.fact dt{letter-spacing:.06em}.panel-policy{padding:26px 28px}.pricing .btn{border-color:#80bdb0}.register{border-radius:16px;background:linear-gradient(120deg,#eef7f3,#e6f1ef);box-shadow:inset 0 1px 0 #fff,0 16px 40px -30px #17324d40}
+.faq-items{border-top:0}.faq{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:12px;overflow:clip}.faq summary,.faq:first-child summary{padding:21px 52px 21px 22px;min-height:68px;line-height:1.8}.faq summary:after{content:"+";right:20px;top:20px;transition:transform .4s var(--spring)}.faq[open] summary:after{content:"+";transform:rotate(45deg)}.faq[open]{border-color:#9dbdb5}.faq p{margin:0;padding:0 22px 23px;max-width:100%;color:#506470}.faq summary:hover{color:#08665f}
+@media(hover:hover){.primary:hover{background:var(--green);border-color:var(--green);box-shadow:inset 0 1px 0 #ffffff26,0 3px 0 #065f58,0 4px 8px #10283e0c;transform:translateY(-2px) scale(1.015)}.secondary:hover{background:#fff;border-color:#bdcbd1;transform:translateY(-2px)}.btn:hover:before{opacity:1}.btn:hover:after{transform:translate(2px,-2px)}.secondary:hover:after{transform:translateY(3px)}.btn:active{transform:translateY(1px) scale(.975)}.panel:hover{transform:translateY(-4px)}.panel:hover:before{opacity:1}}
+@media(min-width:960px){.price-number{font-size:64px}.hero-grid{gap:56px}.mock{width:calc(100% + 8px);max-width:none}.section,.pricing{padding:104px 0}}
+@media(max-width:480px){.hero{padding-top:44px}.mock{border-radius:16px}.price{padding:28px 22px}.panel-policy{padding:22px}.faq summary,.faq:first-child summary{padding-left:18px;font-size:14px}.faq p{padding-inline:18px}.register{padding:26px 20px}.header-cta{padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.btn,.panel{transform:none!important}}
+
 </style></head><body><a class="skip" href="#main">本文へ移動</a>
 <header class="site-header"><div class="container header"><a class="brand" href="../"><span class="mark">S</span>スノーボール</a><a class="x" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）</a><a class="btn primary header-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録</a></div></header>
 <main id="main" tabindex="-1"><section class="hero"><div class="container hero-grid"><div><p class="label">Shopify店舗向け・再入荷通知アプリ</p><p class="status">開発中・先行登録受付中</p><h1>再入荷を、<br>待っている人に届ける。</h1><p class="lead">色・サイズごとの再入荷希望を受け付け、在庫が戻ったら希望した人へ自動で知らせます。Shopifyの標準機能では組めない、希望した本人への自動通知だけを行う単機能アプリを、日本のShopify店舗向けに開発しています。</p><div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a><a class="btn secondary" href="#price">価格を見る</a></div><p class="hero-price">予定月額 ¥3,980（税別）／通知は月3,000件まで込み</p><p class="small assurance">登録は無料です。購入の約束ではありません</p><p class="small promise">開発を継続する場合、登録店舗にはベータ版を無料で提供し、正式リリース後3か月無料とします。想定より登録が集まらない場合は開発の優先順位を見直すことがあります。その場合も、登録いただいた方には状況をご連絡します</p></div><figure class="mock" aria-labelledby="mock-caption">
@@ -42,4 +67,76 @@
 <div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a></div><p class="pricing-assurance">登録は無料です。購入の約束ではありません</p>
 <div class="notes"><p class="note"><strong>LINEの送信費について：</strong>LINE通知は、店舗ご自身のLINE公式アカウントから送信する予定です。LINEのメッセージ料金は店舗のLINEプランに従うもので、当方から請求することはありません。</p><p class="note"><strong>現在の状態について：</strong>このアプリは開発中です。本ページは先行登録の受付であり、アプリはまだ提供を開始していません。</p></div></div></section>
 <section class="section"><div class="container"><div class="head"><h2>日本のShopify店舗を対象に、先行登録を受付中です</h2></div><p class="intro">開発を継続する場合、登録店舗にはベータ版を無料で提供し、正式リリース後3か月無料とします。想定より登録が集まらない場合は開発の優先順位を見直すことがあります。その場合も、登録いただいた方には状況をご連絡します</p><div class="register"><div><h3>登録フォーム（所要時間の目安：2〜3分）</h3><p>店舗名・ストアURL・メールアドレスと、いまの再入荷対応、価格への率直な感想をお聞かせください。</p></div><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a><p class="register-timing">ベータ版の準備ができ次第、登録メールアドレスへご連絡します。時期は未定です</p></div><p class="data-note"><strong>登録情報の扱い：</strong>用途は先行登録の管理とベータ版のご連絡のみとし、第三者へは提供しません。削除をご希望の場合は、案内メールへの返信または<a href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">XのDM</a>でご連絡ください。</p><p class="data-note">開発・運営は日本の個人事業「スノーボール」です。お問い合わせには日本語で対応します。</p><section class="faqs" aria-labelledby="faq-title"><div class="faq-heading"><span class="num">FAQ</span><h2 id="faq-title">よくある質問</h2></div><div class="faq-items"><details class="faq"><summary>登録すると何が起きますか？</summary><p>登録内容は先行登録の管理と、ベータ提供のご連絡にだけ使います。ベータ版の準備ができた時点で、登録メールアドレスへご案内をお送りします。</p></details><details class="faq"><summary>途中でやめられますか？</summary><p>はい。登録は購入の約束ではありません。ベータも正式版も、使わない選択はいつでもできます。登録情報の削除を希望される場合は、案内メールへの返信またはXのDMでご連絡ください。</p></details><details class="faq"><summary>LINE通知を使うには何が必要ですか？</summary><p>LINE対応は提供予定です。利用には店舗のLINE公式アカウントが必要です。通知はそのアカウントから送信され、LINE側のメッセージ料金は店舗のプランに従います。設定の手順はベータ提供時にご案内します。</p></details><details class="faq"><summary>月3,000件を超えたらどうなりますか？</summary><p>件数の数え方（チャネルをまたぐ場合を含む）、月3,000件を超えた場合の扱い、SMS等の提供条件は、ベータ開始前に確定し、このページへの追記と登録者へのご連絡をもってお知らせします。それまでの間、月額を超える従量請求は行いません</p></details><details class="faq"><summary>在庫が少ししか戻らないとき、待っている全員に届きますか？</summary><p>一斉に全員へ送るのではなく、申し込んだ順に段階的に通知する設計を予定しています。商品の取り置きや、購入の順番を保証するものではありません。具体的な通知条件はベータ開始前にご案内します。</p></details></div></section></div></section></main>
-<footer class="footer"><div class="container footer-inner"><span class="brand"><span class="mark">S</span>スノーボール</span><span>再入荷を、待っている人に届ける。</span><span>© 2026 湯藤帝成 ／ <a href="../">自己紹介ページ</a></span></div></footer></body></html>
+<footer class="footer"><div class="container footer-inner"><span class="brand"><span class="mark">S</span>スノーボール</span><span>再入荷を、待っている人に届ける。</span><span>© 2026 湯藤帝成 ／ <a href="../">自己紹介ページ</a></span></div></footer>
+<script>
+(() => {
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const spring = 'cubic-bezier(.22,1.12,.36,1)';
+  const running = new Set();
+  function animate(el, frames, options) {
+    if (motion.matches || !el.animate) return;
+    const animation = el.animate(frames, options);
+    running.add(animation);
+    animation.finished.catch(() => {}).finally(() => running.delete(animation));
+    return animation;
+  }
+  // Visible by default: a missing observer or disabled JS never hides content.
+  if ('IntersectionObserver' in window && !motion.matches) {
+    const groups = document.querySelectorAll('.hero-grid > div, .mock, .layout, .pricing > .container, main > .section:last-child > .container, .faqs');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(({target, isIntersecting}) => {
+        if (!isIntersecting) return;
+        observer.unobserve(target);
+        let items;
+        if (target.matches('.mock')) items = target.children;
+        else if (target.matches('.faqs')) items = [target.querySelector('.faq-heading'), ...target.querySelectorAll('.faq')];
+        else if (target.matches('.layout')) items = [target.querySelector('.head'), ...target.querySelectorAll('li')];
+        else items = [...target.children].filter(el => !el.matches('.faqs'));
+        [...items].forEach((el, i) => animate(el,
+          [{opacity:0, transform:'translateY(18px)'}, {opacity:1, transform:'translateY(0)'}],
+          {duration:720, delay:i * 100, easing:spring, fill:'backwards'}));
+      });
+    }, {threshold:0, rootMargin:'0px 0px -32px 0px'});
+    groups.forEach(el => observer.observe(el));
+    motion.addEventListener('change', () => { if (motion.matches) observer.disconnect(); });
+  }
+  document.querySelectorAll('.faq').forEach((details, i) => {
+    const summary = details.querySelector('summary');
+    const answer = details.querySelector('p');
+    summary.id = `faq-question-${i + 1}`;
+    answer.id = `faq-answer-${i + 1}`;
+    summary.setAttribute('aria-controls', answer.id);
+    summary.setAttribute('aria-expanded', String(details.open));
+    answer.setAttribute('role', 'region');
+    answer.setAttribute('aria-labelledby', summary.id);
+    let current;
+    summary.addEventListener('click', async event => {
+      event.preventDefault();
+      current?.cancel();
+      if (details.open && !motion.matches) {
+        current = animate(answer, [{opacity:1, transform:'translateY(0)'}, {opacity:0, transform:'translateY(-5px)'}], {duration:160, easing:'ease-out', fill:'forwards'});
+        if (current) {
+          try { await current.finished; } catch { return; }
+          current.cancel();
+        }
+      }
+      // FLIP moves surrounding rows from their old positions using transforms only.
+      const following = [...document.querySelectorAll('.faq, .footer')].filter(el => details.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING);
+      const positions = following.map(el => el.getBoundingClientRect().top);
+      const opening = !details.open;
+      details.open = opening;
+      summary.setAttribute('aria-expanded', String(opening));
+      following.forEach((el, n) => {
+        const delta = positions[n] - el.getBoundingClientRect().top;
+        if (delta) animate(el, [{transform:`translateY(${delta}px)`}, {transform:'translateY(0)'}], {duration:380, easing:spring});
+      });
+      if (opening) current = animate(answer, [{opacity:0, transform:'translateY(-6px)'}, {opacity:1, transform:'translateY(0)'}], {duration:320, easing:spring});
+    });
+    details.addEventListener('toggle', () => summary.setAttribute('aria-expanded', String(details.open)));
+  });
+  motion.addEventListener('change', () => {
+    if (motion.matches) running.forEach(animation => animation.cancel());
+  });
+})();
+</script>
+</body></html>
