@@ -56,9 +56,128 @@ h1{letter-spacing:-.025em}.label{letter-spacing:.08em}.status{border-radius:100p
 .mock figcaption{margin:0;padding:16px 20px 18px}
 </style></head><body><a class="skip" href="#main">本文へ移動</a>
 <header class="site-header"><div class="container header"><a class="brand" href="../"><span class="mark">S</span>スノーボール</a><a class="x" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）</a><a class="btn primary header-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録</a></div></header>
-<main id="main" tabindex="-1"><section class="hero"><div class="container hero-grid"><div><p class="label">Shopify店舗向け・再入荷通知アプリ</p><p class="status">開発中・先行登録受付中</p><h1>再入荷を、<br>待っている人に届ける。</h1><p class="lead">色・サイズごとの再入荷希望を受け付け、在庫が戻ったら希望した人へ自動で知らせます。Shopifyの標準機能では組めない、希望した本人への自動通知だけを行う単機能アプリを、日本のShopify店舗向けに開発しています。</p><div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a><a class="btn secondary" href="#price">価格を見る</a></div><p class="hero-price">予定月額 ¥3,980（税別）／通知は月3,000件まで込み</p><p class="small assurance">登録は無料です。購入の約束ではありません</p><p class="small promise">開発を継続する場合、登録店舗にはベータ版を無料で提供し、正式リリース後3か月無料とします。想定より登録が集まらない場合は開発の優先順位を見直すことがあります。その場合も、登録いただいた方には状況をご連絡します</p></div><figure class="mock" aria-labelledby="mock-caption">
-<img class="mock-img" src="mock-ui.webp" alt="再入荷通知の申込画面と、届く通知メールのサンプルUI（設計イメージ）" width="1075" height="1926">
-<figcaption id="mock-caption">申込画面と通知メールの設計イメージです。<br>開発中のため、実際の画面とは異なります。</figcaption></figure></div></section>
+<main id="main" tabindex="-1"><section class="hero"><div class="container hero-grid"><div><p class="label">Shopify店舗向け・再入荷通知アプリ</p><p class="status">開発中・先行登録受付中</p><h1>再入荷を、<br>待っている人に届ける。</h1><p class="lead">色・サイズごとの再入荷希望を受け付け、在庫が戻ったら希望した人へ自動で知らせます。Shopifyの標準機能では組めない、希望した本人への自動通知だけを行う単機能アプリを、日本のShopify店舗向けに開発しています。</p><div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a><a class="btn secondary" href="#price">価格を見る</a></div><p class="hero-price">予定月額 ¥3,980（税別）／通知は月3,000件まで込み</p><p class="small assurance">登録は無料です。購入の約束ではありません</p><p class="small promise">開発を継続する場合、登録店舗にはベータ版を無料で提供し、正式リリース後3か月無料とします。想定より登録が集まらない場合は開発の優先順位を見直すことがあります。その場合も、登録いただいた方には状況をご連絡します</p></div><figure class="mock mock-demo" aria-labelledby="mock-caption">
+<style>
+.mock.mock-demo{padding:18px;background:#eaf5f3;color:#17324d}
+.mock-demo .demo-chip{display:inline-block;margin-bottom:12px;padding:2px 10px;border-radius:20px;background:#17324d;color:#fff;font-size:11px;font-weight:700}
+.mock-demo .window{margin-bottom:12px;background:#fff;color:#17324d}
+.mock-demo .bar{background:#fafcfb;color:#17324d;font-size:12px;font-weight:700;flex-wrap:wrap}
+.mock-demo .sample-content{padding:16px}
+.mock-demo h3,.mock-demo .variant{color:#17324d}
+.mock-demo .sample-stock{color:#3e4d59}
+.mock-demo .sample-form{margin-top:12px;color:#17324d}
+.mock-demo .sample-input{display:block;width:100%;min-width:0;background:#fafcfb;color:#17324d;font:inherit;font-size:16px;letter-spacing:normal}
+.mock-demo button{font:inherit;font-size:12px;cursor:pointer}
+.mock-demo .sample-button{display:block;width:100%;min-height:44px;border:0;background:#17324d;color:#fff;line-height:1.6}
+.mock-demo .sample-button:disabled{background:#eaf5f3;color:#3e4d59;cursor:default;box-shadow:none}
+.mock-demo .demo-note{margin:10px 0 0;color:#3e4d59;font-size:12px;line-height:1.8}
+.mock-demo .demo-count{margin-left:auto;white-space:nowrap}
+.mock-demo .demo-list{margin:0 0 14px;padding-left:24px;font-size:12px;line-height:1.8}
+.mock-demo .demo-list li{padding:5px 4px;overflow-wrap:anywhere}
+.mock-demo .demo-new{background:#eaf5f3;color:#17324d;border-left:3px solid #08776e;font-weight:700}
+.mock-demo .email .sender,.mock-demo .sample-link{color:#17324d}
+.mock-demo .demo-reset{display:block;min-height:44px;margin:10px auto 0;padding:6px;border:0;background:#fff;color:#17324d;text-decoration:underline;text-underline-offset:4px}
+.mock-demo figcaption{padding:4px 0 0;color:#3e4d59}
+.mock-demo [hidden]{display:none!important}
+</style>
+<span class="demo-chip">操作デモ</span>
+<section class="window sample-product" aria-labelledby="demo-customer-title">
+<div class="bar" id="demo-customer-title">購入者画面</div>
+<div class="sample-content">
+<h3>Tシャツ</h3>
+<p class="variant"><span>色：黒</span><span>サイズ：M</span></p>
+<p class="sample-stock">売り切れ</p>
+<div class="sample-form">
+<label for="demo-email">メールアドレス</label>
+<input class="sample-input" id="demo-email" type="email" value="you@example.com" autocomplete="off" spellcheck="false" required aria-describedby="mock-caption demo-email-error">
+<p class="demo-note" id="demo-email-error" role="alert" hidden>メールアドレスを入力してください。</p>
+<button class="sample-button" id="demo-request" type="button">再入荷を通知</button>
+<p class="demo-note" id="demo-request-status" role="status"></p>
+</div>
+</div>
+</section>
+<section class="window" aria-labelledby="demo-store-title">
+<div class="bar" id="demo-store-title">店舗側</div>
+<div class="sample-content">
+<h3 class="bar">再入荷の申込（申込順）<span class="demo-count" id="demo-count" role="status">2件</span></h3>
+<ol class="demo-list" id="demo-list">
+<li>a***@example.com（黒／M）</li>
+<li>s***@example.com（黒／M）</li>
+</ol>
+<button class="sample-button" id="demo-restock" type="button" disabled aria-describedby="demo-hint">在庫を戻す（デモ）</button>
+<p class="demo-note" id="demo-hint">まず申込してみてください</p>
+</div>
+</section>
+<div id="demo-notification" role="status" aria-live="polite">
+<section class="window" aria-labelledby="demo-notification-title" hidden>
+<div class="bar" id="demo-notification-title">届く通知</div>
+<div class="sample-content email">
+<p class="sender">差出人：（店舗名）</p>
+<h3>お待ちの商品が、再入荷しました。</h3>
+<p>Tシャツ／黒／M</p>
+<span class="sample-link">商品ページを見る →</span>
+<p class="demo-note">申込順に送信されます（デモでは、あなたの分だけを表示しています）</p>
+<button class="demo-reset" id="demo-reset" type="button">最初からやり直す</button>
+</div>
+</section>
+</div>
+<script>
+(() => {
+  const demo = document.currentScript.closest('.mock-demo');
+  const get = id => demo.querySelector('#demo-' + id);
+  const email = get('email');
+  const request = get('request');
+  const restock = get('restock');
+  const notification = get('notification').querySelector('section');
+  let row;
+  request.addEventListener('click', () => {
+    if (request.disabled) return;
+    if (!email.validity.valid) {
+      get('email-error').hidden = false;
+      email.setAttribute('aria-invalid', 'true');
+      email.focus();
+      return;
+    }
+    get('email-error').hidden = true;
+    email.removeAttribute('aria-invalid');
+    row = document.createElement('li');
+    row.className = 'demo-new';
+    row.textContent = email.value.trim() + '（デモ）（黒／M）';
+    get('list').append(row);
+    get('count').textContent = '3件';
+    request.disabled = true;
+    request.textContent = '申込を受け付けました';
+    email.readOnly = true;
+    get('request-status').textContent = '在庫が戻ったらお知らせします。';
+    restock.disabled = false;
+    get('hint').textContent = '申込が増えました。在庫を戻して通知を確認できます。';
+  });
+  restock.addEventListener('click', () => {
+    if (restock.disabled) return;
+    notification.hidden = false;
+    restock.disabled = true;
+    get('hint').textContent = '在庫を戻しました。下に届く通知を表示しています。';
+    get('reset').focus();
+  });
+  get('reset').addEventListener('click', () => {
+    row?.remove();
+    row = undefined;
+    email.value = 'you@example.com';
+    email.readOnly = false;
+    email.removeAttribute('aria-invalid');
+    get('email-error').hidden = true;
+    request.disabled = false;
+    request.textContent = '再入荷を通知';
+    get('request-status').textContent = '';
+    get('count').textContent = '2件';
+    restock.disabled = true;
+    get('hint').textContent = 'まず申込してみてください';
+    notification.hidden = true;
+    email.focus();
+  });
+})();
+</script>
+<figcaption id="mock-caption">実際に触れる操作デモです。開発中のイメージで、内容はすべてサンプルです。入力したメールアドレスが送信されることはありません。</figcaption></figure></div></section>
 <section class="section"><div class="container layout"><div class="head"><h2>売り切れのあとに、起きていること</h2></div><ol class="list"><li><span class="ln">1</span><h3>「入荷したら教えて」が、店の手作業になっている</h3><p>問い合わせフォームやメールで再入荷の希望を受けても、記録と連絡は手作業です。規模が小さいうちは回っても、商品数や希望者が増えると漏れが出ます。</p></li><li><span class="ln">2</span><h3>標準機能では、希望者への自動通知が組めない</h3><p>Shopify Flowの内部メールは店舗スタッフ宛て専用で、購入者一人ひとりへ自動で送ることはできません。マーケティングメールで代替する方法も、届くのは購読者だけで、色やサイズ（バリアント）単位の希望とは結びつきません。</p></li><li><span class="ln">3</span><h3>使う前に、料金の範囲を知りたい</h3><p>公開されている低評価レビューでは、料金への不満が繰り返し見られます。使う前に、月額に含まれる範囲と追加費用の条件を確認できることが大切です。</p></li></ol></div></section>
 <section class="section alt"><div class="container layout"><div class="head"><h2>このアプリがすること</h2><p class="desc">再入荷通知に絞り、設定も管理画面も小さく保つ設計です。</p></div><ol class="list features"><li><span class="ln">1</span><h3>商品ページで「再入荷を通知」を受け付ける</h3><p>売り切れ中の商品ページに通知の申込ボタンを置きます。色・サイズなどのバリアント単位で受け付けるので、「このサイズが戻ったら知りたい」にそのまま応えられます。</p></li><li><span class="ln">2</span><h3>在庫が戻ったら、自動で知らせる</h3><p>申し込んだ順に、段階的に通知する設計を予定しています。商品の取り置きや、購入の順番を保証するものではありません。</p><p>対応チャネルはメール・LINE・SMSを予定。ベータ開始時点の対応範囲は改めてご案内します。</p></li><li><span class="ln">3</span><h3>送信は自店の名前で、文面は自店の言葉で</h3><p>通知はベンダーの名前ではなく、店舗自身の名義で届きます。文面は日本語のテンプレートを店舗ごとに編集できます。</p></li></ol></div></section>
 
