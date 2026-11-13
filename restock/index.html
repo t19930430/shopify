@@ -62,34 +62,36 @@ h1{letter-spacing:-.025em}.label{letter-spacing:.08em}.status{border-radius:100p
 <style>
 .demo-section{background:#f5f8f8;color:#17324d}.demo-section *{letter-spacing:normal}.demo-section h2,.demo-section h3{color:#17324d}.demo-section .desc{color:#3e4d59}.demo-app{background:#fff;color:#17324d}.demo-app .bar{justify-content:space-between;color:#17324d;font-size:13px;padding:16px 20px;background:#eaf5f3}.demo-shell{display:grid;grid-template-columns:170px minmax(0,1fr)}.demo-nav{padding:16px;border-right:1px solid #dce4e7;background:#f5f8f8}.demo-section button,.demo-section input,.demo-section textarea,.demo-section select{font:inherit;font-size:14px}.demo-section button{min-height:44px;padding:9px 14px;border:1px solid #17324d;border-radius:6px;background:#fff;color:#17324d;cursor:pointer;line-height:1.6}.demo-section button:disabled{background:#eaf5f3;color:#3e4d59;cursor:default}.demo-nav button{display:block;width:100%;margin-bottom:8px;text-align:left;border-color:transparent}.demo-section button[aria-selected="true"],.demo-section .demo-primary,.demo-section button[aria-pressed="true"]{background:#17324d;color:#fff}.demo-main{min-width:0;padding:24px}.demo-panel+.demo-panel{margin-top:32px}.demo-section [hidden]{display:none!important}.demo-ready .demo-panel{margin-top:0}.demo-section h3{font-size:17px;margin-bottom:16px}.demo-products{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}.demo-card,.demo-box{padding:16px;border:1px solid #dce4e7;border-radius:8px;background:#fff}.demo-card p{margin:8px 0 0;font-size:14px}.demo-card:first-child{border-color:#08776e;background:#eaf5f3}.demo-section .demo-note{font-size:12px;color:#3e4d59;margin:8px 0;line-height:1.8}.demo-table-wrap{overflow:auto;margin-bottom:20px}.demo-table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap;text-align:left}.demo-table th{background:#f5f8f8}.demo-table td,.demo-table th{padding:10px 12px;border-bottom:1px solid #dce4e7}.demo-chip{display:inline-block;padding:2px 8px;border-radius:20px;background:#eaf5f3;color:#17324d;font-size:12px}.demo-sent{background:#17324d;color:#fff}.demo-new{background:#eaf5f3;color:#17324d;font-weight:700}.demo-controls{display:flex;align-items:end;flex-wrap:wrap;gap:12px}.demo-section label{display:block;font-size:13px;font-weight:600}.demo-section input,.demo-section textarea,.demo-section select{display:block;width:100%;margin-top:6px;padding:10px;border:1px solid #596b78;border-radius:5px;background:#fff;color:#17324d;min-height:44px}.demo-section input[type="number"]{width:110px}.demo-section textarea{min-height:180px;resize:vertical}.demo-customer{margin-bottom:20px;background:#f5f8f8}.demo-customer label{flex:1;min-width:180px}.demo-result{min-height:28px;font-size:14px;margin:12px 0;color:#17324d}.demo-editor{display:grid;grid-template-columns:1fr 1fr;gap:24px}.demo-fields label{margin-bottom:16px}.demo-channel-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}.demo-preview{background:#f5f8f8;padding:20px;border-radius:8px;overflow-wrap:anywhere}.demo-preview p{white-space:pre-wrap;font-size:14px;margin:12px 0 0}.demo-preview h4{font-size:16px;margin:16px 0}.demo-preview small{font-size:12px}.demo-preview[data-channel="line"] p{padding:16px;background:#eaf5f3;border:1px solid #08776e;border-radius:0 16px 16px}.demo-settings{max-width:560px}.demo-toggle-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #dce4e7}.demo-settings select{margin-bottom:24px}.demo-meter{height:12px;background:#eaf5f3;border:1px solid #08776e;border-radius:8px;overflow:hidden}.demo-meter span{display:block;width:4.2667%;height:100%;background:#08776e}.demo-section .demo-reset{margin-top:16px}.demo-static-note{margin:0 0 16px}
 @media(max-width:760px){.demo-shell{grid-template-columns:minmax(0,1fr)}.demo-nav{display:flex;gap:6px;border-right:0;border-bottom:1px solid #dce4e7;padding:10px;overflow:auto}.demo-nav button{width:auto;white-space:nowrap;margin:0;flex:1;padding:9px}.demo-main{padding:16px}.demo-editor,.demo-products{grid-template-columns:1fr}.demo-app .bar{flex-wrap:wrap;gap:8px}}
+.demo-steps{padding:16px;background:#eaf5f3;color:#17324d;border-radius:8px;margin-bottom:16px;line-height:1.8}.demo-unsubscribed{background:#f5f8f8;color:#3e4d59}.demo-line-link{display:block;margin-top:12px;text-decoration:underline}.demo-product-link{display:inline-block;margin-top:12px;padding:10px;border:1px solid #17324d;border-radius:6px;color:#17324d;background:#fff}.demo-preview[data-channel="sms"] .demo-product-link{display:none}
 </style>
 <div class="container"><div class="head"><p class="label">操作デモ</p><h2 id="demo-title">店舗側の管理画面を、触って試せます</h2><p class="desc">開発中の画面イメージです。表示される申込者・件数はすべてサンプルで、入力した内容が送信・保存されることはありません。</p></div>
-<div class="demo-app window"><div class="bar"><strong>再入荷通知（デモ）</strong><span>サンプル商店</span></div><div class="demo-shell">
+<div class="demo-steps">① 購入者が申し込む（購入者の操作）→ ② Shopifyで在庫が戻る（在庫の更新を検知する想定）→ ③ アプリが申込順に通知する（アプリの動作）<p class="demo-note">在庫の検知方法など、提供仕様の詳細は検証中です。</p></div>
+<div class="demo-app window"><div class="bar"><strong>再入荷通知（デモ）</strong><span id="demo-store-display">サンプル商店</span><span class="demo-chip">開発中の画面イメージ</span></div><div class="demo-shell">
 <nav class="demo-nav" aria-label="デモ画面"><button type="button" id="demo-tab-list" data-panel="list">申込一覧</button><button type="button" id="demo-tab-copy" data-panel="copy">通知の文面</button><button type="button" id="demo-tab-settings" data-panel="settings">設定</button></nav>
 <div class="demo-main"><noscript><p class="demo-note demo-static-note">操作にはJavaScriptが必要です。各画面のサンプルを続けて表示しています。</p></noscript>
 <section class="demo-panel" id="demo-panel-list" aria-labelledby="demo-tab-list"><h3>申込一覧</h3>
-<div class="demo-products"><div class="demo-card"><strong>Tシャツ（色：黒／サイズ：M）</strong><p>在庫 <span id="demo-stock">0</span>｜申込 <span id="demo-count">12</span>件</p></div><div class="demo-card"><strong>トートバッグ（色：生成り）</strong><p>在庫 3｜申込 3件</p></div></div>
-<div class="demo-table-wrap"><table class="demo-table"><caption class="demo-note">Tシャツの申込者（申込順）</caption><thead><tr><th scope="col">順番・メール</th><th scope="col">バリアント</th><th scope="col">申込日時</th><th scope="col">状態</th></tr></thead><tbody id="demo-rows"><tr><td>1. a***@example.com</td><td>黒／M</td><td>11/02 10:02</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>2. s***@example.com</td><td>黒／M</td><td>11/02 14:09</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>3. k***@example.com</td><td>黒／M</td><td>11/03 10:16</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>4. m***@example.com</td><td>黒／M</td><td>11/03 14:23</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>5. n***@example.com</td><td>黒／M</td><td>11/04 10:30</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>6. t***@example.com</td><td>黒／M</td><td>11/04 14:37</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>7. y***@example.com</td><td>黒／M</td><td>11/05 10:44</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>8. r***@example.com</td><td>黒／M</td><td>11/05 14:51</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>9. h***@example.com</td><td>黒／M</td><td>11/06 10:58</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>10. e***@example.com</td><td>黒／M</td><td>11/06 14:05</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>11. w***@example.com</td><td>黒／M</td><td>11/07 10:12</td><td><span class="demo-chip">通知待ち</span></td></tr>
-<tr><td>12. o***@example.com</td><td>黒／M</td><td>11/07 14:19</td><td><span class="demo-chip">通知待ち</span></td></tr></tbody></table></div>
-<aside class="demo-box demo-customer" aria-label="購入者画面のサンプル"><p class="demo-note">購入者画面では</p><div class="demo-controls"><label for="demo-email">メールアドレス<input id="demo-email" type="email" value="you@example.com" autocomplete="off" required></label><button type="button" id="demo-request">再入荷を通知</button></div><p class="demo-note" id="demo-email-error" role="alert"></p></aside>
-<div class="demo-controls"><label for="demo-quantity">在庫数<input id="demo-quantity" type="number" value="5" min="0" step="1"></label><button type="button" class="demo-primary" id="demo-restock">在庫を登録する（デモ）</button></div><p class="demo-result" id="demo-result" role="status" aria-live="polite"></p><button type="button" class="demo-reset" id="demo-reset">最初からやり直す</button>
+<div class="demo-products"><div class="demo-card"><strong>Tシャツ（全バリアント）</strong><p>在庫 <span id="demo-stock">0</span>｜申込 <span id="demo-count">12</span>件</p></div><div class="demo-card"><strong>トートバッグ（色：生成り）</strong><p>在庫 3｜申込 3件</p><p class="demo-note">このデモでは操作できません（表示のみ）</p></div></div>
+<div class="demo-table-wrap"><table class="demo-table"><caption class="demo-note">Tシャツの申込者（申込順）</caption><thead><tr><th scope="col">順番・メール</th><th scope="col">バリアント</th><th scope="col">申込日時</th><th scope="col">状態</th></tr></thead><tbody id="demo-rows"><tr><td>1. a***@gmail.com</td><td>黒／M</td><td>11/02 09:43</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>2. s***@yahoo.co.jp</td><td>黒／M</td><td>11/02 22:18</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>3. k***@icloud.com</td><td>黒／L</td><td>11/03 00:07</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr class="demo-unsubscribed"><td>4. m***@docomo.ne.jp</td><td>黒／M</td><td>11/03 18:52</td><td><span class="demo-chip demo-unsubscribed">配信停止</span></td></tr>
+<tr><td>5. n***@outlook.com</td><td>黒／M</td><td>11/03 19:06</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>6. t***@softbank.ne.jp</td><td>白／M</td><td>11/05 07:31</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>7. y***@gmail.com</td><td>黒／M</td><td>11/05 23:48</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>8. r***@icloud.com</td><td>黒／M</td><td>11/06 12:14</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>9. h***@yahoo.co.jp</td><td>黒／L</td><td>11/06 12:39</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>10. e***@docomo.ne.jp</td><td>黒／M</td><td>11/08 21:03</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>11. w***@outlook.com</td><td>黒／M</td><td>11/09 06:56</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>12. o***@gmail.com</td><td>黒／M</td><td>11/09 16:22</td><td><span class="demo-chip">通知待ち</span></td></tr></tbody></table></div><p class="demo-note">初期状態：通知待ち11件＋配信停止1件。配信停止の方は送信対象から外れます。</p>
+<aside class="demo-box demo-customer" aria-label="購入者画面のサンプル"><p class="demo-note">購入者画面では</p><div class="demo-controls"><label for="demo-email">メールアドレス<input id="demo-email" type="email" value="you@example.com" autocomplete="off" required></label><button type="button" id="demo-request">再入荷を通知</button></div><p class="demo-note">「色：黒／サイズ：M」の申込として追加されます。</p><p class="demo-note" id="demo-email-error" role="alert"></p></aside>
+<div class="demo-controls"><label for="demo-quantity">今回の入荷数（追加分）<input id="demo-quantity" type="number" value="5" min="0" step="1"></label><button type="button" class="demo-primary" id="demo-restock">この入荷で通知する（デモ）</button></div><p class="demo-note" id="demo-breakdown">累計入荷 0個／通知済み 0人／あと 0人まで通知できます</p><p class="demo-note">通知は入荷のたびに、待機の先頭から送られます。最初の通知で購入されなかった場合の再通知の条件は検証中です。商品の取り置きはしません。</p><p class="demo-result" id="demo-result" role="status" aria-live="polite"></p><button type="button" class="demo-reset" id="demo-reset">最初からやり直す</button>
 </section>
-<section class="demo-panel" id="demo-panel-copy" aria-labelledby="demo-tab-copy"><h3>通知の文面</h3><div class="demo-editor"><div class="demo-fields"><label for="demo-store-name">店舗名<input id="demo-store-name" value="サンプル商店"></label><label for="demo-subject">件名<input id="demo-subject" value="お待ちの商品が、再入荷しました。"></label><label for="demo-body">本文<textarea id="demo-body">いつもご利用ありがとうございます。
+<section class="demo-panel" id="demo-panel-copy" aria-labelledby="demo-tab-copy"><h3>通知の文面</h3><div class="demo-editor"><div class="demo-fields"><label for="demo-store-name">店舗名<input id="demo-store-name" value="サンプル商店"></label><label for="demo-subject">件名（メールのみ）<input id="demo-subject" value="お待ちの商品が、再入荷しました。"></label><label for="demo-body">本文<textarea id="demo-body">いつもご利用ありがとうございます。
 お待ちの商品「{商品名}（{バリアント}）」が再入荷しました。
 在庫には限りがありますので、お早めにご覧ください。</textarea></label><p class="demo-note">{商品名}・{バリアント}・{店舗名} が使えます。</p></div><div><div class="demo-channel-tabs" aria-label="プレビューチャネル"><button type="button" data-channel="email">メール（予定）</button><button type="button" data-channel="line">LINE（予定）</button><button type="button" data-channel="sms">SMS（予定）</button></div><div class="demo-preview" id="demo-preview" data-channel="email"><small id="demo-preview-sender">差出人：サンプル商店</small><h4 id="demo-preview-subject">お待ちの商品が、再入荷しました。</h4><p id="demo-preview-body">いつもご利用ありがとうございます。
 お待ちの商品「Tシャツ（黒／M）」が再入荷しました。
-在庫には限りがありますので、お早めにご覧ください。</p></div></div></div></section>
-<section class="demo-panel" id="demo-panel-settings" aria-labelledby="demo-tab-settings"><h3>設定</h3><div class="demo-settings"><p class="demo-note">通知チャネル（すべて提供予定）</p><div class="demo-toggle-row"><span>メール（予定）</span><button type="button" data-toggle="メール" aria-pressed="true">ON</button></div><div class="demo-toggle-row"><span>LINE（予定）</span><button type="button" data-toggle="LINE" aria-pressed="true">ON</button></div><div class="demo-toggle-row"><span>SMS（予定）</span><button type="button" data-toggle="SMS" aria-pressed="false">OFF</button></div><p class="demo-result" id="demo-channel-summary" role="status">現在の送信チャネル：メール・LINE</p><label for="demo-pace">送信ペース（予定）<select id="demo-pace"><option>在庫数まで一括</option><option>10件ずつ段階的</option></select></label><div class="demo-box"><p>今月 128件 / 月3,000件まで込み</p><div class="demo-meter" role="meter" aria-label="今月の通知件数（サンプル）" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="128"><span></span></div><p class="demo-note">サンプル表示です。</p></div></div></section>
+在庫には限りがありますので、お早めにご覧ください。</p><span class="demo-product-link" id="demo-preview-link">商品ページを見る（黒／M）</span></div></div></div></section>
+<section class="demo-panel" id="demo-panel-settings" aria-labelledby="demo-tab-settings"><h3>設定</h3><div class="demo-settings"><p class="demo-note">通知チャネル（すべて提供予定）</p><div class="demo-toggle-row"><span>メール（予定）<small class="demo-note" style="display:block">申込時のメールアドレスへ送信します</small></span><button type="button" data-toggle="メール" aria-pressed="true">ON</button></div><div class="demo-toggle-row"><span>LINE（予定）<small class="demo-note" style="display:block">店舗のLINE公式アカウントの接続が必要です（提供予定）</small></span><button type="button" data-toggle="LINE" aria-pressed="true">ON</button></div><div class="demo-toggle-row"><span>SMS（予定）<small class="demo-note" style="display:block">送信元番号の登録が必要です（提供予定）</small></span><button type="button" data-toggle="SMS" aria-pressed="false">OFF</button></div><p class="demo-result" id="demo-channel-summary" role="status">現在の送信チャネル：メール・LINE</p><label for="demo-pace">送信ペース（予定）<select id="demo-pace"><option>在庫数まで一括</option><option>10件ずつ段階的</option></select></label><div class="demo-box"><p>今月 <span id="demo-monthly">128</span>件 / 月3,000件まで込み</p><div id="demo-meter" class="demo-meter" role="meter" aria-label="今月の通知件数（サンプル）" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="128"><span></span></div><p class="demo-note">サンプル表示です。</p><p class="demo-note">件数の数え方はベータ開始前に確定します。</p></div></div></section>
 </div></div></div></div>
 <script>
 (() => {
@@ -119,17 +121,29 @@ h1{letter-spacing:-.025em}.label{letter-spacing:.08em}.status{border-radius:100p
   const initialRows = get('rows').innerHTML;
   const defaults = ['store-name', 'subject', 'body'].map(id => get(id).value);
   let channel = 'email', timer, batch = [], cursor = 0;
+  let total = 0, sent = 0, monthly = 128, usedChannels = '', staged = false;
+  const waiting = () => [...get('rows').querySelectorAll('.demo-chip:not(.demo-sent):not(.demo-unsubscribed)')];
+  function counters() {
+    get('stock').textContent = String(total - sent);
+    get('breakdown').textContent = `累計入荷 ${total}個／通知済み ${sent}人／あと ${total - sent}人まで通知できます`;
+    get('monthly').textContent = String(monthly);
+    get('meter').setAttribute('aria-valuenow', String(monthly));
+    get('meter').querySelector('span').style.width = Math.min(100, monthly / 3000 * 100) + '%';
+  }
   const channels = [...root.querySelectorAll('[data-channel]')];
   const toggles = [...root.querySelectorAll('[data-toggle]')];
   function preview() {
     const store = get('store-name').value;
+    get('store-display').textContent = store;
     const replace = value => value.replace(/\{(商品名|バリアント|店舗名)\}/g, (_, key) => ({商品名:'Tシャツ',バリアント:'黒／M',店舗名:store})[key]);
     const body = replace(get('body').value);
     get('preview').dataset.channel = channel;
     get('preview-sender').textContent = (channel === 'email' ? '差出人：' : '') + store;
     get('preview-subject').hidden = channel !== 'email';
     get('preview-subject').textContent = replace(get('subject').value);
-    get('preview-body').textContent = channel === 'sms' ? (store + '：' + body.replace(/\s+/g, ' ')).slice(0, 110) + ((store + '：' + body.replace(/\s+/g, ' ')).length > 110 ? '…' : '') : body;
+    get('preview-body').textContent = channel === 'sms' ? store + '：' + body.replace(/\s+/g, ' ') + '\nhttps://example.com/products/t-shirt（サンプルURL）' : body;
+    if (channel === 'line') { const link = document.createElement('span'); link.className = 'demo-line-link'; link.textContent = '商品ページを見る（黒／M）'; get('preview-body').append(link); }
+    get('preview-link').hidden = channel !== 'email';
     channels.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.channel === channel)));
   }
   channels.forEach(button => button.addEventListener('click', () => { channel = button.dataset.channel; preview(); }));
@@ -152,28 +166,31 @@ h1{letter-spacing:-.025em}.label{letter-spacing:.08em}.status{border-radius:100p
     get('count').textContent = '13'; get('request').textContent = '申込を受け付けました'; get('request').disabled = true; email.readOnly = true;
   });
   function finish() {
-    const remaining = [...get('rows').querySelectorAll('.demo-chip')].filter(chip => !chip.classList.contains('demo-sent')).length;
-    get('result').textContent = batch.length + '件に通知を送信しました。残り' + remaining + '件は次回の入荷時に送られます。';
+    const remaining = waiting().length;
+    get('result').textContent = `（デモ）${batch.length}件に通知を送った想定です。実際には送信していません。残り${remaining}件は次回の入荷時に送られます。${usedChannels}で送った想定です。` + (staged ? '送信ペース『10件ずつ段階的』のため、今回は10件までです。' : '');
     get('restock').disabled = false; get('quantity').disabled = false;
   }
   function advance() {
     if (motion.matches) {
-      while (cursor < batch.length) { const chip = batch[cursor++]; chip.textContent = '送信済み'; chip.classList.add('demo-sent'); }
-    } else if (cursor < batch.length) { const chip = batch[cursor++]; chip.textContent = '送信済み'; chip.classList.add('demo-sent'); }
+      while (cursor < batch.length) { const chip = batch[cursor++]; chip.textContent = '送信済み'; chip.classList.add('demo-sent'); sent++; monthly++; counters(); }
+    } else if (cursor < batch.length) { const chip = batch[cursor++]; chip.textContent = '送信済み'; chip.classList.add('demo-sent'); sent++; monthly++; counters(); }
     if (cursor < batch.length) timer = setTimeout(advance, 260); else finish();
   }
   motion.addEventListener('change', () => { if (motion.matches && get('restock').disabled) { clearTimeout(timer); advance(); } });
   get('restock').addEventListener('click', () => {
     if (get('restock').disabled) return;
     const field = get('quantity'), quantity = field.valueAsNumber;
-    if (!field.value || !Number.isSafeInteger(quantity) || quantity < 0) { get('result').textContent = '在庫数を0以上の整数で入力してください。通知は送信していません。'; return; }
-    get('stock').textContent = String(quantity);
-    if (!quantity) { get('result').textContent = '在庫数が0のため、通知は送信していません。'; return; }
-    batch = [...get('rows').querySelectorAll('.demo-chip:not(.demo-sent)')].slice(0, quantity); cursor = 0;
+    if (!field.value || !Number.isSafeInteger(quantity) || quantity < 0) { get('result').textContent = '今回の入荷数を0以上の整数で入力してください。通知は送信していません。'; return; }
+    usedChannels = toggles.filter(button => button.getAttribute('aria-pressed') === 'true').map(button => button.dataset.toggle).join('・');
+    if (!usedChannels) { get('result').textContent = '通知チャネルが設定されていません。設定タブで1つ以上オンにしてください。'; return; }
+    if (!Number.isSafeInteger(total + quantity)) { get('result').textContent = '入荷数が大きすぎます。'; return; }
+    total += quantity; counters();
+    staged = get('pace').selectedIndex === 1;
+    batch = waiting().slice(0, Math.min(total - sent, staged ? 10 : Infinity)); cursor = 0;
     get('restock').disabled = true; field.disabled = true; get('result').textContent = '申込順に通知を送信しています（デモ）。'; advance();
   });
   get('reset').addEventListener('click', () => {
-    clearTimeout(timer); batch = []; cursor = 0; get('rows').innerHTML = initialRows;
+    clearTimeout(timer); batch = []; cursor = 0; total = 0; sent = 0; monthly = 128; counters(); get('rows').innerHTML = initialRows;
     get('stock').textContent = '0'; get('count').textContent = '12'; get('quantity').value = '5'; get('quantity').disabled = false; get('restock').disabled = false;
     get('email').value = 'you@example.com'; get('email').readOnly = false; get('email').removeAttribute('aria-invalid'); get('email-error').textContent = '';
     get('request').disabled = false; get('request').textContent = '再入荷を通知'; get('result').textContent = '';
