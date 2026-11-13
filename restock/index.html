@@ -56,128 +56,134 @@ h1{letter-spacing:-.025em}.label{letter-spacing:.08em}.status{border-radius:100p
 .mock figcaption{margin:0;padding:16px 20px 18px}
 </style></head><body><a class="skip" href="#main">本文へ移動</a>
 <header class="site-header"><div class="container header"><a class="brand" href="../"><span class="mark">S</span>スノーボール</a><a class="x" href="https://x.com/taisei_ec_dev" target="_blank" rel="noopener">X（@taisei_ec_dev）</a><a class="btn primary header-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録</a></div></header>
-<main id="main" tabindex="-1"><section class="hero"><div class="container hero-grid"><div><p class="label">Shopify店舗向け・再入荷通知アプリ</p><p class="status">開発中・先行登録受付中</p><h1>再入荷を、<br>待っている人に届ける。</h1><p class="lead">色・サイズごとの再入荷希望を受け付け、在庫が戻ったら希望した人へ自動で知らせます。Shopifyの標準機能では組めない、希望した本人への自動通知だけを行う単機能アプリを、日本のShopify店舗向けに開発しています。</p><div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a><a class="btn secondary" href="#price">価格を見る</a></div><p class="hero-price">予定月額 ¥3,980（税別）／通知は月3,000件まで込み</p><p class="small assurance">登録は無料です。購入の約束ではありません</p><p class="small promise">開発を継続する場合、登録店舗にはベータ版を無料で提供し、正式リリース後3か月無料とします。想定より登録が集まらない場合は開発の優先順位を見直すことがあります。その場合も、登録いただいた方には状況をご連絡します</p></div><figure class="mock mock-demo" aria-labelledby="mock-caption">
+<main id="main" tabindex="-1"><section class="hero"><div class="container hero-grid"><div><p class="label">Shopify店舗向け・再入荷通知アプリ</p><p class="status">開発中・先行登録受付中</p><h1>再入荷を、<br>待っている人に届ける。</h1><p class="lead">色・サイズごとの再入荷希望を受け付け、在庫が戻ったら希望した人へ自動で知らせます。Shopifyの標準機能では組めない、希望した本人への自動通知だけを行う単機能アプリを、日本のShopify店舗向けに開発しています。</p><div class="actions"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfdGqTKpcsvX1WoYFLXbgHQT5lpQnuTb9045Tme0iH3DyUbbw/viewform" target="_blank" rel="noopener">先行登録する</a><a class="btn secondary" href="#price">価格を見る</a></div><p class="hero-price">予定月額 ¥3,980（税別）／通知は月3,000件まで込み</p><p class="small assurance">登録は無料です。購入の約束ではありません</p><p class="small promise">開発を継続する場合、登録店舗にはベータ版を無料で提供し、正式リリース後3か月無料とします。想定より登録が集まらない場合は開発の優先順位を見直すことがあります。その場合も、登録いただいた方には状況をご連絡します</p></div><figure class="mock" aria-labelledby="mock-caption"><img class="mock-img" src="mock-ui.webp" alt="再入荷通知の申込画面と、届く通知メールのサンプルUI（設計イメージ）" width="1075" height="1926">
+<figcaption id="mock-caption">申込画面と通知メールの設計イメージです。<br>開発中のため、実際の画面とは異なります。</figcaption></figure></div></section>
+<section class="section demo-section" aria-labelledby="demo-title">
 <style>
-.mock.mock-demo{padding:18px;background:#eaf5f3;color:#17324d}
-.mock-demo .demo-chip{display:inline-block;margin-bottom:12px;padding:2px 10px;border-radius:20px;background:#17324d;color:#fff;font-size:11px;font-weight:700}
-.mock-demo .window{margin-bottom:12px;background:#fff;color:#17324d}
-.mock-demo .bar{background:#fafcfb;color:#17324d;font-size:12px;font-weight:700;flex-wrap:wrap}
-.mock-demo .sample-content{padding:16px}
-.mock-demo h3,.mock-demo .variant{color:#17324d}
-.mock-demo .sample-stock{color:#3e4d59}
-.mock-demo .sample-form{margin-top:12px;color:#17324d}
-.mock-demo .sample-input{display:block;width:100%;min-width:0;background:#fafcfb;color:#17324d;font:inherit;font-size:16px;letter-spacing:normal}
-.mock-demo button{font:inherit;font-size:12px;cursor:pointer}
-.mock-demo .sample-button{display:block;width:100%;min-height:44px;border:0;background:#17324d;color:#fff;line-height:1.6}
-.mock-demo .sample-button:disabled{background:#eaf5f3;color:#3e4d59;cursor:default;box-shadow:none}
-.mock-demo .demo-note{margin:10px 0 0;color:#3e4d59;font-size:12px;line-height:1.8}
-.mock-demo .demo-count{margin-left:auto;white-space:nowrap}
-.mock-demo .demo-list{margin:0 0 14px;padding-left:24px;font-size:12px;line-height:1.8}
-.mock-demo .demo-list li{padding:5px 4px;overflow-wrap:anywhere}
-.mock-demo .demo-new{background:#eaf5f3;color:#17324d;border-left:3px solid #08776e;font-weight:700}
-.mock-demo .email .sender,.mock-demo .sample-link{color:#17324d}
-.mock-demo .demo-reset{display:block;min-height:44px;margin:10px auto 0;padding:6px;border:0;background:#fff;color:#17324d;text-decoration:underline;text-underline-offset:4px}
-.mock-demo figcaption{padding:4px 0 0;color:#3e4d59}
-.mock-demo [hidden]{display:none!important}
+.demo-section{background:#f5f8f8;color:#17324d}.demo-section *{letter-spacing:normal}.demo-section h2,.demo-section h3{color:#17324d}.demo-section .desc{color:#3e4d59}.demo-app{background:#fff;color:#17324d}.demo-app .bar{justify-content:space-between;color:#17324d;font-size:13px;padding:16px 20px;background:#eaf5f3}.demo-shell{display:grid;grid-template-columns:170px minmax(0,1fr)}.demo-nav{padding:16px;border-right:1px solid #dce4e7;background:#f5f8f8}.demo-section button,.demo-section input,.demo-section textarea,.demo-section select{font:inherit;font-size:14px}.demo-section button{min-height:44px;padding:9px 14px;border:1px solid #17324d;border-radius:6px;background:#fff;color:#17324d;cursor:pointer;line-height:1.6}.demo-section button:disabled{background:#eaf5f3;color:#3e4d59;cursor:default}.demo-nav button{display:block;width:100%;margin-bottom:8px;text-align:left;border-color:transparent}.demo-section button[aria-selected="true"],.demo-section .demo-primary,.demo-section button[aria-pressed="true"]{background:#17324d;color:#fff}.demo-main{min-width:0;padding:24px}.demo-panel+.demo-panel{margin-top:32px}.demo-section [hidden]{display:none!important}.demo-ready .demo-panel{margin-top:0}.demo-section h3{font-size:17px;margin-bottom:16px}.demo-products{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}.demo-card,.demo-box{padding:16px;border:1px solid #dce4e7;border-radius:8px;background:#fff}.demo-card p{margin:8px 0 0;font-size:14px}.demo-card:first-child{border-color:#08776e;background:#eaf5f3}.demo-section .demo-note{font-size:12px;color:#3e4d59;margin:8px 0;line-height:1.8}.demo-table-wrap{overflow:auto;margin-bottom:20px}.demo-table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap;text-align:left}.demo-table th{background:#f5f8f8}.demo-table td,.demo-table th{padding:10px 12px;border-bottom:1px solid #dce4e7}.demo-chip{display:inline-block;padding:2px 8px;border-radius:20px;background:#eaf5f3;color:#17324d;font-size:12px}.demo-sent{background:#17324d;color:#fff}.demo-new{background:#eaf5f3;color:#17324d;font-weight:700}.demo-controls{display:flex;align-items:end;flex-wrap:wrap;gap:12px}.demo-section label{display:block;font-size:13px;font-weight:600}.demo-section input,.demo-section textarea,.demo-section select{display:block;width:100%;margin-top:6px;padding:10px;border:1px solid #596b78;border-radius:5px;background:#fff;color:#17324d;min-height:44px}.demo-section input[type="number"]{width:110px}.demo-section textarea{min-height:180px;resize:vertical}.demo-customer{margin-bottom:20px;background:#f5f8f8}.demo-customer label{flex:1;min-width:180px}.demo-result{min-height:28px;font-size:14px;margin:12px 0;color:#17324d}.demo-editor{display:grid;grid-template-columns:1fr 1fr;gap:24px}.demo-fields label{margin-bottom:16px}.demo-channel-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}.demo-preview{background:#f5f8f8;padding:20px;border-radius:8px;overflow-wrap:anywhere}.demo-preview p{white-space:pre-wrap;font-size:14px;margin:12px 0 0}.demo-preview h4{font-size:16px;margin:16px 0}.demo-preview small{font-size:12px}.demo-preview[data-channel="line"] p{padding:16px;background:#eaf5f3;border:1px solid #08776e;border-radius:0 16px 16px}.demo-settings{max-width:560px}.demo-toggle-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #dce4e7}.demo-settings select{margin-bottom:24px}.demo-meter{height:12px;background:#eaf5f3;border:1px solid #08776e;border-radius:8px;overflow:hidden}.demo-meter span{display:block;width:4.2667%;height:100%;background:#08776e}.demo-section .demo-reset{margin-top:16px}.demo-static-note{margin:0 0 16px}
+@media(max-width:760px){.demo-shell{grid-template-columns:minmax(0,1fr)}.demo-nav{display:flex;gap:6px;border-right:0;border-bottom:1px solid #dce4e7;padding:10px;overflow:auto}.demo-nav button{width:auto;white-space:nowrap;margin:0;flex:1;padding:9px}.demo-main{padding:16px}.demo-editor,.demo-products{grid-template-columns:1fr}.demo-app .bar{flex-wrap:wrap;gap:8px}}
 </style>
-<span class="demo-chip">操作デモ</span>
-<section class="window sample-product" aria-labelledby="demo-customer-title">
-<div class="bar" id="demo-customer-title">購入者画面</div>
-<div class="sample-content">
-<h3>Tシャツ</h3>
-<p class="variant"><span>色：黒</span><span>サイズ：M</span></p>
-<p class="sample-stock">売り切れ</p>
-<div class="sample-form">
-<label for="demo-email">メールアドレス</label>
-<input class="sample-input" id="demo-email" type="email" value="you@example.com" autocomplete="off" spellcheck="false" required aria-describedby="mock-caption demo-email-error">
-<p class="demo-note" id="demo-email-error" role="alert" hidden>メールアドレスを入力してください。</p>
-<button class="sample-button" id="demo-request" type="button">再入荷を通知</button>
-<p class="demo-note" id="demo-request-status" role="status"></p>
-</div>
-</div>
+<div class="container"><div class="head"><p class="label">操作デモ</p><h2 id="demo-title">店舗側の管理画面を、触って試せます</h2><p class="desc">開発中の画面イメージです。表示される申込者・件数はすべてサンプルで、入力した内容が送信・保存されることはありません。</p></div>
+<div class="demo-app window"><div class="bar"><strong>再入荷通知（デモ）</strong><span>サンプル商店</span></div><div class="demo-shell">
+<nav class="demo-nav" aria-label="デモ画面"><button type="button" id="demo-tab-list" data-panel="list">申込一覧</button><button type="button" id="demo-tab-copy" data-panel="copy">通知の文面</button><button type="button" id="demo-tab-settings" data-panel="settings">設定</button></nav>
+<div class="demo-main"><noscript><p class="demo-note demo-static-note">操作にはJavaScriptが必要です。各画面のサンプルを続けて表示しています。</p></noscript>
+<section class="demo-panel" id="demo-panel-list" aria-labelledby="demo-tab-list"><h3>申込一覧</h3>
+<div class="demo-products"><div class="demo-card"><strong>Tシャツ（色：黒／サイズ：M）</strong><p>在庫 <span id="demo-stock">0</span>｜申込 <span id="demo-count">12</span>件</p></div><div class="demo-card"><strong>トートバッグ（色：生成り）</strong><p>在庫 3｜申込 3件</p></div></div>
+<div class="demo-table-wrap"><table class="demo-table"><caption class="demo-note">Tシャツの申込者（申込順）</caption><thead><tr><th scope="col">順番・メール</th><th scope="col">バリアント</th><th scope="col">申込日時</th><th scope="col">状態</th></tr></thead><tbody id="demo-rows"><tr><td>1. a***@example.com</td><td>黒／M</td><td>11/02 10:02</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>2. s***@example.com</td><td>黒／M</td><td>11/02 14:09</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>3. k***@example.com</td><td>黒／M</td><td>11/03 10:16</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>4. m***@example.com</td><td>黒／M</td><td>11/03 14:23</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>5. n***@example.com</td><td>黒／M</td><td>11/04 10:30</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>6. t***@example.com</td><td>黒／M</td><td>11/04 14:37</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>7. y***@example.com</td><td>黒／M</td><td>11/05 10:44</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>8. r***@example.com</td><td>黒／M</td><td>11/05 14:51</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>9. h***@example.com</td><td>黒／M</td><td>11/06 10:58</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>10. e***@example.com</td><td>黒／M</td><td>11/06 14:05</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>11. w***@example.com</td><td>黒／M</td><td>11/07 10:12</td><td><span class="demo-chip">通知待ち</span></td></tr>
+<tr><td>12. o***@example.com</td><td>黒／M</td><td>11/07 14:19</td><td><span class="demo-chip">通知待ち</span></td></tr></tbody></table></div>
+<aside class="demo-box demo-customer" aria-label="購入者画面のサンプル"><p class="demo-note">購入者画面では</p><div class="demo-controls"><label for="demo-email">メールアドレス<input id="demo-email" type="email" value="you@example.com" autocomplete="off" required></label><button type="button" id="demo-request">再入荷を通知</button></div><p class="demo-note" id="demo-email-error" role="alert"></p></aside>
+<div class="demo-controls"><label for="demo-quantity">在庫数<input id="demo-quantity" type="number" value="5" min="0" step="1"></label><button type="button" class="demo-primary" id="demo-restock">在庫を登録する（デモ）</button></div><p class="demo-result" id="demo-result" role="status" aria-live="polite"></p><button type="button" class="demo-reset" id="demo-reset">最初からやり直す</button>
 </section>
-<section class="window" aria-labelledby="demo-store-title">
-<div class="bar" id="demo-store-title">店舗側</div>
-<div class="sample-content">
-<h3 class="bar">再入荷の申込（申込順）<span class="demo-count" id="demo-count" role="status">2件</span></h3>
-<ol class="demo-list" id="demo-list">
-<li>a***@example.com（黒／M）</li>
-<li>s***@example.com（黒／M）</li>
-</ol>
-<button class="sample-button" id="demo-restock" type="button" disabled aria-describedby="demo-hint">在庫を戻す（デモ）</button>
-<p class="demo-note" id="demo-hint">まず申込してみてください</p>
-</div>
-</section>
-<div id="demo-notification" role="status" aria-live="polite">
-<section class="window" aria-labelledby="demo-notification-title" hidden>
-<div class="bar" id="demo-notification-title">届く通知</div>
-<div class="sample-content email">
-<p class="sender">差出人：（店舗名）</p>
-<h3>お待ちの商品が、再入荷しました。</h3>
-<p>Tシャツ／黒／M</p>
-<span class="sample-link">商品ページを見る →</span>
-<p class="demo-note">申込順に送信されます（デモでは、あなたの分だけを表示しています）</p>
-<button class="demo-reset" id="demo-reset" type="button">最初からやり直す</button>
-</div>
-</section>
-</div>
+<section class="demo-panel" id="demo-panel-copy" aria-labelledby="demo-tab-copy"><h3>通知の文面</h3><div class="demo-editor"><div class="demo-fields"><label for="demo-store-name">店舗名<input id="demo-store-name" value="サンプル商店"></label><label for="demo-subject">件名<input id="demo-subject" value="お待ちの商品が、再入荷しました。"></label><label for="demo-body">本文<textarea id="demo-body">いつもご利用ありがとうございます。
+お待ちの商品「{商品名}（{バリアント}）」が再入荷しました。
+在庫には限りがありますので、お早めにご覧ください。</textarea></label><p class="demo-note">{商品名}・{バリアント}・{店舗名} が使えます。</p></div><div><div class="demo-channel-tabs" aria-label="プレビューチャネル"><button type="button" data-channel="email">メール（予定）</button><button type="button" data-channel="line">LINE（予定）</button><button type="button" data-channel="sms">SMS（予定）</button></div><div class="demo-preview" id="demo-preview" data-channel="email"><small id="demo-preview-sender">差出人：サンプル商店</small><h4 id="demo-preview-subject">お待ちの商品が、再入荷しました。</h4><p id="demo-preview-body">いつもご利用ありがとうございます。
+お待ちの商品「Tシャツ（黒／M）」が再入荷しました。
+在庫には限りがありますので、お早めにご覧ください。</p></div></div></div></section>
+<section class="demo-panel" id="demo-panel-settings" aria-labelledby="demo-tab-settings"><h3>設定</h3><div class="demo-settings"><p class="demo-note">通知チャネル（すべて提供予定）</p><div class="demo-toggle-row"><span>メール（予定）</span><button type="button" data-toggle="メール" aria-pressed="true">ON</button></div><div class="demo-toggle-row"><span>LINE（予定）</span><button type="button" data-toggle="LINE" aria-pressed="true">ON</button></div><div class="demo-toggle-row"><span>SMS（予定）</span><button type="button" data-toggle="SMS" aria-pressed="false">OFF</button></div><p class="demo-result" id="demo-channel-summary" role="status">現在の送信チャネル：メール・LINE</p><label for="demo-pace">送信ペース（予定）<select id="demo-pace"><option>在庫数まで一括</option><option>10件ずつ段階的</option></select></label><div class="demo-box"><p>今月 128件 / 月3,000件まで込み</p><div class="demo-meter" role="meter" aria-label="今月の通知件数（サンプル）" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="128"><span></span></div><p class="demo-note">サンプル表示です。</p></div></div></section>
+</div></div></div></div>
 <script>
 (() => {
-  const demo = document.currentScript.closest('.mock-demo');
-  const get = id => demo.querySelector('#demo-' + id);
-  const email = get('email');
-  const request = get('request');
-  const restock = get('restock');
-  const notification = get('notification').querySelector('section');
-  let row;
-  request.addEventListener('click', () => {
-    if (request.disabled) return;
-    if (!email.validity.valid) {
-      get('email-error').hidden = false;
-      email.setAttribute('aria-invalid', 'true');
-      email.focus();
-      return;
-    }
-    get('email-error').hidden = true;
-    email.removeAttribute('aria-invalid');
-    row = document.createElement('li');
-    row.className = 'demo-new';
-    row.textContent = email.value.trim() + '（デモ）（黒／M）';
-    get('list').append(row);
-    get('count').textContent = '3件';
-    request.disabled = true;
-    request.textContent = '申込を受け付けました';
-    email.readOnly = true;
-    get('request-status').textContent = '在庫が戻ったらお知らせします。';
-    restock.disabled = false;
-    get('hint').textContent = '申込が増えました。在庫を戻して通知を確認できます。';
+  const root = document.currentScript.closest('.demo-section');
+  const get = name => root.querySelector('#demo-' + name);
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const tabs = [...root.querySelectorAll('[data-panel]')];
+  const panels = [...root.querySelectorAll('.demo-panel')];
+  function selectTab(index) {
+    tabs.forEach((tab, i) => { tab.setAttribute('aria-selected', String(i === index)); tab.tabIndex = i === index ? 0 : -1; panels[i].hidden = i !== index; });
+  }
+  root.querySelector('.demo-nav').setAttribute('role', 'tablist');
+  tabs.forEach((tab, i) => {
+    tab.setAttribute('role', 'tab'); tab.setAttribute('aria-controls', panels[i].id);
+    panels[i].setAttribute('role', 'tabpanel'); panels[i].tabIndex = 0;
+    tab.addEventListener('click', () => selectTab(i));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (i + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (i + tabs.length - 1) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length - 1;
+      if (next !== undefined) { event.preventDefault(); selectTab(next); tabs[next].focus(); }
+    });
   });
-  restock.addEventListener('click', () => {
-    if (restock.disabled) return;
-    notification.hidden = false;
-    restock.disabled = true;
-    get('hint').textContent = '在庫を戻しました。下に届く通知を表示しています。';
-    get('reset').focus();
+  root.classList.add('demo-ready'); selectTab(0);
+  const initialRows = get('rows').innerHTML;
+  const defaults = ['store-name', 'subject', 'body'].map(id => get(id).value);
+  let channel = 'email', timer, batch = [], cursor = 0;
+  const channels = [...root.querySelectorAll('[data-channel]')];
+  const toggles = [...root.querySelectorAll('[data-toggle]')];
+  function preview() {
+    const store = get('store-name').value;
+    const replace = value => value.replace(/\{(商品名|バリアント|店舗名)\}/g, (_, key) => ({商品名:'Tシャツ',バリアント:'黒／M',店舗名:store})[key]);
+    const body = replace(get('body').value);
+    get('preview').dataset.channel = channel;
+    get('preview-sender').textContent = (channel === 'email' ? '差出人：' : '') + store;
+    get('preview-subject').hidden = channel !== 'email';
+    get('preview-subject').textContent = replace(get('subject').value);
+    get('preview-body').textContent = channel === 'sms' ? (store + '：' + body.replace(/\s+/g, ' ')).slice(0, 110) + ((store + '：' + body.replace(/\s+/g, ' ')).length > 110 ? '…' : '') : body;
+    channels.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.channel === channel)));
+  }
+  channels.forEach(button => button.addEventListener('click', () => { channel = button.dataset.channel; preview(); }));
+  ['store-name', 'subject', 'body'].forEach(id => get(id).addEventListener('input', preview));
+  function summary() {
+    get('channel-summary').textContent = '現在の送信チャネル：' + (toggles.filter(button => button.getAttribute('aria-pressed') === 'true').map(button => button.dataset.toggle).join('・') || 'なし');
+  }
+  toggles.forEach(button => {
+    button.setAttribute('aria-label', button.dataset.toggle + '（予定）');
+    button.addEventListener('click', () => { const on = button.getAttribute('aria-pressed') !== 'true'; button.setAttribute('aria-pressed', String(on)); button.textContent = on ? 'ON' : 'OFF'; summary(); });
+  });
+  get('request').addEventListener('click', () => {
+    if (get('request').disabled) return;
+    const email = get('email');
+    if (!email.validity.valid) { get('email-error').textContent = '有効なメールアドレスを入力してください。'; email.setAttribute('aria-invalid', 'true'); email.focus(); return; }
+    get('email-error').textContent = ''; email.removeAttribute('aria-invalid');
+    const row = document.createElement('tr'); row.className = 'demo-new';
+    [ '13. ' + email.value.trim() + '（デモ）', '黒／M', '11/09 10:00' ].forEach(text => { const cell = document.createElement('td'); cell.textContent = text; row.append(cell); });
+    const cell = document.createElement('td'), chip = document.createElement('span'); chip.className = 'demo-chip'; chip.textContent = '通知待ち'; cell.append(chip); row.append(cell); get('rows').append(row);
+    get('count').textContent = '13'; get('request').textContent = '申込を受け付けました'; get('request').disabled = true; email.readOnly = true;
+  });
+  function finish() {
+    const remaining = [...get('rows').querySelectorAll('.demo-chip')].filter(chip => !chip.classList.contains('demo-sent')).length;
+    get('result').textContent = batch.length + '件に通知を送信しました。残り' + remaining + '件は次回の入荷時に送られます。';
+    get('restock').disabled = false; get('quantity').disabled = false;
+  }
+  function advance() {
+    if (motion.matches) {
+      while (cursor < batch.length) { const chip = batch[cursor++]; chip.textContent = '送信済み'; chip.classList.add('demo-sent'); }
+    } else if (cursor < batch.length) { const chip = batch[cursor++]; chip.textContent = '送信済み'; chip.classList.add('demo-sent'); }
+    if (cursor < batch.length) timer = setTimeout(advance, 260); else finish();
+  }
+  motion.addEventListener('change', () => { if (motion.matches && get('restock').disabled) { clearTimeout(timer); advance(); } });
+  get('restock').addEventListener('click', () => {
+    if (get('restock').disabled) return;
+    const field = get('quantity'), quantity = field.valueAsNumber;
+    if (!field.value || !Number.isSafeInteger(quantity) || quantity < 0) { get('result').textContent = '在庫数を0以上の整数で入力してください。通知は送信していません。'; return; }
+    get('stock').textContent = String(quantity);
+    if (!quantity) { get('result').textContent = '在庫数が0のため、通知は送信していません。'; return; }
+    batch = [...get('rows').querySelectorAll('.demo-chip:not(.demo-sent)')].slice(0, quantity); cursor = 0;
+    get('restock').disabled = true; field.disabled = true; get('result').textContent = '申込順に通知を送信しています（デモ）。'; advance();
   });
   get('reset').addEventListener('click', () => {
-    row?.remove();
-    row = undefined;
-    email.value = 'you@example.com';
-    email.readOnly = false;
-    email.removeAttribute('aria-invalid');
-    get('email-error').hidden = true;
-    request.disabled = false;
-    request.textContent = '再入荷を通知';
-    get('request-status').textContent = '';
-    get('count').textContent = '2件';
-    restock.disabled = true;
-    get('hint').textContent = 'まず申込してみてください';
-    notification.hidden = true;
-    email.focus();
+    clearTimeout(timer); batch = []; cursor = 0; get('rows').innerHTML = initialRows;
+    get('stock').textContent = '0'; get('count').textContent = '12'; get('quantity').value = '5'; get('quantity').disabled = false; get('restock').disabled = false;
+    get('email').value = 'you@example.com'; get('email').readOnly = false; get('email').removeAttribute('aria-invalid'); get('email-error').textContent = '';
+    get('request').disabled = false; get('request').textContent = '再入荷を通知'; get('result').textContent = '';
+    ['store-name', 'subject', 'body'].forEach((id, i) => get(id).value = defaults[i]); channel = 'email'; preview();
+    toggles.forEach((button, i) => { button.setAttribute('aria-pressed', String(i < 2)); button.textContent = i < 2 ? 'ON' : 'OFF'; }); summary(); get('pace').selectedIndex = 0; selectTab(0);
   });
+  preview();
 })();
 </script>
-<figcaption id="mock-caption">実際に触れる操作デモです。開発中のイメージで、内容はすべてサンプルです。入力したメールアドレスが送信されることはありません。</figcaption></figure></div></section>
+</section>
 <section class="section"><div class="container layout"><div class="head"><h2>売り切れのあとに、起きていること</h2></div><ol class="list"><li><span class="ln">1</span><h3>「入荷したら教えて」が、店の手作業になっている</h3><p>問い合わせフォームやメールで再入荷の希望を受けても、記録と連絡は手作業です。規模が小さいうちは回っても、商品数や希望者が増えると漏れが出ます。</p></li><li><span class="ln">2</span><h3>標準機能では、希望者への自動通知が組めない</h3><p>Shopify Flowの内部メールは店舗スタッフ宛て専用で、購入者一人ひとりへ自動で送ることはできません。マーケティングメールで代替する方法も、届くのは購読者だけで、色やサイズ（バリアント）単位の希望とは結びつきません。</p></li><li><span class="ln">3</span><h3>使う前に、料金の範囲を知りたい</h3><p>公開されている低評価レビューでは、料金への不満が繰り返し見られます。使う前に、月額に含まれる範囲と追加費用の条件を確認できることが大切です。</p></li></ol></div></section>
 <section class="section alt"><div class="container layout"><div class="head"><h2>このアプリがすること</h2><p class="desc">再入荷通知に絞り、設定も管理画面も小さく保つ設計です。</p></div><ol class="list features"><li><span class="ln">1</span><h3>商品ページで「再入荷を通知」を受け付ける</h3><p>売り切れ中の商品ページに通知の申込ボタンを置きます。色・サイズなどのバリアント単位で受け付けるので、「このサイズが戻ったら知りたい」にそのまま応えられます。</p></li><li><span class="ln">2</span><h3>在庫が戻ったら、自動で知らせる</h3><p>申し込んだ順に、段階的に通知する設計を予定しています。商品の取り置きや、購入の順番を保証するものではありません。</p><p>対応チャネルはメール・LINE・SMSを予定。ベータ開始時点の対応範囲は改めてご案内します。</p></li><li><span class="ln">3</span><h3>送信は自店の名前で、文面は自店の言葉で</h3><p>通知はベンダーの名前ではなく、店舗自身の名義で届きます。文面は日本語のテンプレートを店舗ごとに編集できます。</p></li></ol></div></section>
 
